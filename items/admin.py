@@ -24,6 +24,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name'
     )
 
+
 admin.site.register(Category)
 admin.site.register(BrandOrAuthor)
 admin.site.register(Colour)
