@@ -1,3 +1,4 @@
+
 from django.contrib import admin
 from .models import Category, BrandOrAuthor, Colour, ClothesType, Size, KidsAge, Item
 
@@ -7,7 +8,6 @@ class ItemAdmin(admin.ModelAdmin):
         'name',
         'category',
         'clothes_type',
-        'men_women_children'
         'size',
         'kids_age',
         'colour',
@@ -15,8 +15,9 @@ class ItemAdmin(admin.ModelAdmin):
         'description',
         'price',
         'quality',
-        'image',    
+        'image'   
     )
+    ordering = ('sku',)
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
@@ -24,12 +25,10 @@ class CategoryAdmin(admin.ModelAdmin):
         'name'
     )
 
-
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(BrandOrAuthor)
 admin.site.register(Colour)
 admin.site.register(ClothesType)
 admin.site.register(Size)
 admin.site.register(KidsAge)
-admin.site.register(Item)
-
+admin.site.register(Item, ItemAdmin)
