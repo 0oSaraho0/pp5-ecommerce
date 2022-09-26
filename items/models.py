@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 class Category(models.Model):
     """ A class to display the category """
@@ -62,7 +63,7 @@ class Item(models.Model):
     """ A class to record each product Item """
     
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, max_length=2254)
     name = models.CharField(max_length=254)
     clothes_type = models.ForeignKey('ClothesType', null=True, blank=True, on_delete=models.SET_NULL)
     men_women_children = models.CharField(max_length=200, choices=MEN_WOMEN_CHILDREN, default='na')
@@ -79,3 +80,4 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
