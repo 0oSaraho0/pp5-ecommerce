@@ -22,6 +22,11 @@ def all_items(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 items = items.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if sortkey == 'quality':
+                sortkey = 'quality'
+
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
