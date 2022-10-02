@@ -32,6 +32,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Remove</th>
                                 </tr>
                             </thead>
 
@@ -47,11 +48,17 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.item.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.item.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <form class="form" action="{% url 'remove_from_bag' item.bag_item_id %}" method="POST">
+                                            {% csrf_token %}
+                                        <span class="my-0"> <button class="btn btn-danger" type="submit"><small>Remove</small></button></span>
+                                        </form>
                                     </td>
                                 </tr>
                             {% endfor %}
