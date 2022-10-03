@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from items.models import Item
 
@@ -12,7 +12,7 @@ def view_bag(request):
 def add_to_bag(request, bag_item_id):
     """ Add  item to bag """
 
-    item = Item.objects.get(pk=bag_item_id)
+    item = get_object_or_404(Item, pk=bag_item_id)
     quantity = 1
     
     redirect_url = request.POST.get('redirect_url')
@@ -31,7 +31,7 @@ def add_to_bag(request, bag_item_id):
 def remove_from_bag(request, bag_item_id):
     """ Remove item from bag """
     
-    item = Item.objects.get(pk=bag_item_id)
+    item = get_object_or_404(Item, pk=bag_item_id)
     bag = request.session.get('bag', {})
     bag.pop(bag_item_id)
 
