@@ -509,16 +509,12 @@ As expected there were no responsiveness issues.
 
 # Bugs
 
-- I initially had a bug in the URLs that was confusing the browse ideas page with the idea detail page and causing an error.  I solved this by adding post/ to the front of the url.
->path('post/<slug:pk>/<str:activity_name>/', views.IdeaDetail.as_view(
+Error when migration change in checkout model.
+File "/workspace/.pip-modules/lib/python3.8/site-packages/django/db/backends/dummy/base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
 
-- I had a bug that stopped the images being uploaded from the front end.  They could be uploaded from admin.
-After a lot of investigation, I finally worked out that I needed to add the encoding type to the form for it to recognise the image.
->enctype="multipart/form-data"
-
-- There was a bug that stopped the nav bar working when it collapsed down to a button on smaller screens.  The issue was the bootstap link was slightly wrong.  Once corrected the bug was solved.
-
-- I had arranged the image size to all be the same size so that the cards are a uniform height.  I had ‘cover’ on this but this option was cutting the top of the picture off.  To solve this I have changed the css to ‘contain’.  This does not entirely fix the problem because it would be nice to have the pictuers all the same size. In a future development, I would like to add a function for the user to be able to pick the area of the picture they want to upload.
+I looked at the error and went to the database section in settings.  I found a typo in Databases and updated this to fix the problem
 
 # Deployment
 
