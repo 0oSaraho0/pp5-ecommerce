@@ -12,6 +12,10 @@ body {
     font-family: 'Shippori Antuque';
 }
 
+#topnav {
+    line-height: 0;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
