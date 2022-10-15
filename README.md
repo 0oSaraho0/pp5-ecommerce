@@ -59,6 +59,16 @@ Epic 3 User Stories
 - As a shopper I want to see confirmation that my payment has gone through successfully and that my purchase is being sent to the correct address so that I know it has been done correctly
 - As a shopper I want laneys loft to send me an email so that I can keep confirmation of purchase for my own records.
 
+Epic 4 - Profile Page
+ - As a user I want to be able to access a profile page so that I can update my orders
+ - As a usder I want to see what donations I have made in the past
+ - As a user I want to be able to update my details if I move house.
+
+Epic 5 - Blog
+
+- As a site  owner I want to share where the charitable money is being sent so that users can see the good their purchases and donations are doing.
+ 
+
 Epic 4 - CRUD
 
 Adding CRUD functionality for users adding editing and deleting ideas
