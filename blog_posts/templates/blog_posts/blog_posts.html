@@ -1,6 +1,82 @@
-<div class="col">
-    <div class="row">
-        <h1>Blog Posts go here
-        </h1>
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
     </div>
+{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1>Blog</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <!-- blog post Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for blogpost in blogpost_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                {% if "placeholder" in blogpost.image.url %}
+                                <!-- Placeholder image-->
+                                <img class="card-img-top blog-page-pic" 
+                                src="" 
+                                alt="">
+                                {% else %}
+                                <!-- User image -->
+                                <img class="card-img-top blog-post-page-pic" src="{{ blogpost.image.url }}" alt="">
+                                {% endif %}
+                                <!-- Activity name and link to  detail page -->
+                                <a href="{% url 'blog_post_detail' blogpost.id%}" class="blog-link">
+                                <h2 class="card-title">{{ blogpost.event_name }}</h2>
+                            </a>
+                            <hr>
+                            <!-- date blog post was updated -->
+                            <p class="card-text h6">{{ blogpost.created_on}}</p>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                <!-- starts a new row after every 3 blogs posted -->
+                {% if forloop.counter|divisibleby:3 %}
+
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- puts next page button at the bottom of the page when there are more than 6 blog posts on a page-->
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
+
+
+{% endblock %}
