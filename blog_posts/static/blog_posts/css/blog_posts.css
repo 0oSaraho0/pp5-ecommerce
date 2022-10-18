@@ -1,0 +1,53 @@
+
+
+body {
+
+    background-color: lightgray;
+
+/* blog detail  */
+}
+.blog-detail-pic {
+    width: 100%;
+    height: 45vw;
+    object-fit: contain;
+}
+
+.masthead {
+    margin-top: 13rem;
+}
+
+.summary {
+    font-size: 1.15rem;
+}
+
+.website {
+    font-size: 1.15rem;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* Media Queries Blog Detail */
+
+@media (min-width: 384px) {
+    .masthead {
+        margin-top: 9rem;
+    }
+}
+
+@media (min-width: 542px) {
+    .masthead {
+        margin-top: 7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead {
+        margin-top: 0rem;
+    }
+}

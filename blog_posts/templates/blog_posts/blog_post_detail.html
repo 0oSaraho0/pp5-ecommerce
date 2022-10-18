@@ -1,88 +1,63 @@
-
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
+<link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 {% block content %}
 
-<!-- idea detail card -->
+
 <div class="masthead">
     <div class="container pic-padding card">
         <div class="row g-0">
-            <div class="col-md-6">
-                <h1 class="idea-title"> {{ blogpost.event_name }}</h1>
-                <p class="idea-subtitle">{{ blogpost.charity_name }} | {{ blogpost.created_on }}</p>
+            <div class="col-12 text-center">
+                <h1 class="post-title"> {{ blogpost.event_name }}</h1>
+                <h2 class="post-title">We raised <strong>{{ blogpost.donation }}</strong> for {{ blogpost.charity_name }}</h2>
             </div>
-            <div class="row">
-                <div class="d-md-block col-md-12 card">
-                    {% if "placeholder" in idea.picture.url %}
-                    <!-- placeholder picture -->
-                    <img class="card-img-top border border-light ideas-detail-pic"
-                        src=""
-                        alt="">
-                    {% else %}
-                    <!-- uploaded picture -->
-                    <img class="card-img-top border border-light ideas-detail-pic" src="{{ blogpost.image.url }}" alt="">
-                    {% endif %}
-                </div>
+        </div>
+        <div class="row g-0">
+            <div class="d-md-block col-md-12 card">
+                {% if "placeholder" in idea.picture.url %}
+                <!-- placeholder picture -->
+                <img class="card-img-top border border-light blog-detail-pic" src="" alt="">
+                {% else %}
+                <!-- uploaded picture -->
+                <img class="card-img-top border border-light blog-detail-pic" src="{{ blogpost.image.url }}" alt="">
+                {% endif %}
             </div>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col card mb4 mt3">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Activity Website Address-->
-                    <p> Charity Website:
-                        <a href="{{ blogpost.charity_website }}" target="_blank" rel="noopener"
-                            aria-label="Please visit the website linked to {{idea.activity_name}} (opens in a new window)">
-                            {{ blogpost.charity_website }}</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col card mb4 mt3">
-            <!-- Activity Cost -->
-            <span>
-                    Donation:  {{ blogpost.donation }}
-            </span>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col card mb4 mt3 left top">
-            <div class="card-body">
+    <div class="container summary">
+        <div class="row">
+            <div class="col card mb4 mt3 left top">
                 <!-- Activity Review -->
                 <p class="card-text">
                     {{ blogpost.summary | safe }}
                 </p>
-
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="card website col-md-12">
+                <!-- Activity Website Address-->
+                <p> Charity Website:
+                    <a href="{{ blogpost.charity_website }}" target="_blank" rel="noopener"
+                        aria-label="Please visit the website linked to {{idea.activity_name}} (opens in a new window)">
+                        {{ blogpost.charity_website }}</a>
+                </p>
             </div>
         </div>
     </div>
 
-
-    </div>
-
-</div>
 
 {% endblock content %}
