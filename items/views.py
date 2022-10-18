@@ -47,7 +47,7 @@ def all_items(request):
             query = request.GET['q']
             if not query:
                 messages.error(request,"You didn't enter any searh criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('items'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             items = items.filter(queries)
