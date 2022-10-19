@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from braces.views import SuperuserRequiredMixin
 from django.contrib import messages
@@ -13,6 +13,7 @@ class BlogPostList(ListView):
     queryset = BlogPost.objects.order_by('created_on')
     template_name = 'blog_posts/blog_posts.html'
     paginate_by = 6
+    
 
 
 class BlogPostDetailView(DetailView):
@@ -26,7 +27,7 @@ class BlogPostDetailView(DetailView):
         return get_object_or_404(BlogPost, id=id_)
 
 
-class BlogPostCreateView(LoginRequiredMixin, SuperuserRequiredMixin, CreateView):
+class BlogPostCreateView(SuperuserRequiredMixin, CreateView):
     """ A view to create an idea """
 
     form_class = BlogPostForm
@@ -36,6 +37,26 @@ class BlogPostCreateView(LoginRequiredMixin, SuperuserRequiredMixin, CreateView)
 
     def form_valid(self, form):
         """ If form is valid return to browse ideas """
-        form.instance.superuser = self.request.superuser
+
         messages.success(self.request, 'Idea created successfully')
         return super(BlogPostCreateView, self).form_valid(form)
+
+class EditBlogPostView(SuperuserRequiredMixin, UpdateView):
+    """ A view to edit an idea """
+
+    Model = BlogPost
+    form_class = BlogPostForm
+    success_url = "/blog_posts/blog_posts/"
+    template_name = "blog_posts/edit_blog_post.html"
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(BlogPost, id=id_)
+
+    def form_valid(self, form):
+        """ If form is valid return to browse ideas """
+        messages.success(self.request, 'Idea created successfully')
+        return super().form_valid(form)
+
+
+

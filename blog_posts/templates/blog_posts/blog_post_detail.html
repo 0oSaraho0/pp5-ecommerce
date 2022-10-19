@@ -19,6 +19,11 @@
 <div class="masthead">
     <div class="container pic-padding card">
         <div class="row g-0">
+            <p>
+                <a href="{% url 'edit_blog_post' blogpost.id %}" class="edit-blog" aria-label="Click to edit idea">
+                    Edit your blog
+                </a>
+            </p>
             <div class="col-12 text-center">
                 <h1 class="post-title"> {{ blogpost.event_name }}</h1>
                 <h2 class="post-title">We raised <strong>{{ blogpost.donation }}</strong> for {{ blogpost.charity_name }}</h2>

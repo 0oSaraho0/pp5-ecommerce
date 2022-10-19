@@ -11,6 +11,10 @@ body {
     padding-top: 164px;
 }
 
+.edit-blog {
+    text-align: right;
+}
+
 .blog-detail-pic {
     width: 100%;
     height: 45vw;
