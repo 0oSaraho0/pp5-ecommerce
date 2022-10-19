@@ -66,28 +66,25 @@ Epic 4 - Profile Page
 
 Epic 5 - Blog
 
-- As a site  owner I want to share where the charitable money is being sent so that users can see the good their purchases and donations are doing.
- 
+- As a site user I want to be able to see where the money from the site is being sent so I can feel good about my purchases
+- As a site owner I want to easily be able to add blog entries onto the Site
+- As a site owner I want to be able to edit my blog posts so that I can make corrections easily
+- As a site owner I want to be able to delete blog posts as necessary.
+- As a site owner I want to be the only one who can create edit and delete blog posts
 
-Epic 4 - CRUD
 
-Adding CRUD functionality for users adding editing and deleting ideas
-
-Epic 4 User Stories
-
-- As a user, I want to be able to input my own ideas of things to do into the site in an easy and intuitive way so that I can easily share ideas with others
-- As a user, I want to be able to comment and like other people’s ideas
-- As a user, I want to be able to edit ideas I have created
-- As a user, I want to be able to delete ideas that I have created
-- As the site owner I want to ensure only the creator of an idea can edit or delete it
-
-Epic 5 - Styling
+Epic 5 - Reviews
 
 Epic 5 User Stories
 
-- As a user I want the front page to be clear and self-explanatory so I know I am in the right place
-- As a developer, I want to ensure the styling is correct
-- As a developer, I want to ensure the forms are all the same style and look good on all devices
+- As a user I would like to be able to read reviews about so I can decide if I want to use it
+- As a site user who is logged in I would like to be able to leave my own review so that I can tell others about my experience
+- As a user it would be nice to give my review a rating out of five for ease of reference
+- As a site owner it would be nice to be able to reply to reviews to show a personal touch
+
+
+
+
 
 Epic 6 - Documentation
 
