@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+<div class="row col-md-8 offset-md-2 delete-idea">
+    <div class="col-md-8 offset-md-2 p-3">
+        <!-- Delete idea headig -->
+        <h1 class="text-center">Delete Blog Post</h1>
+        <div class="d-flex justify-content-center pt-3">
+            <!-- Delete idea confirmation form-->
+            <form method="post" class="text-center p-5">
+                {% csrf_token %}
+                <p>Are you sure you want to delete "{{ blogpost.event_name }}"?</p>
+                <input type="submit" value="Confirm" class="button">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

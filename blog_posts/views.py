@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from braces.views import SuperuserRequiredMixin
 from django.contrib import messages
 from .models import BlogPost 
@@ -57,6 +56,19 @@ class EditBlogPostView(SuperuserRequiredMixin, UpdateView):
         """ If form is valid return to browse ideas """
         messages.success(self.request, 'Idea created successfully')
         return super().form_valid(form)
+
+
+class BlogPostDelete(DeleteView):
+    """ A view to delete an idea """
+    model = BlogPost
+    success_url = "/blog_posts/blog_posts/"
+    template_name = "blog_posts/blog_post_delete.html"
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(BlogPost, id=id_)
+
+    
 
 
 
