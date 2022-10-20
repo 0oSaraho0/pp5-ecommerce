@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'blog_posts',
     'django_summernote',
     'reviews',
+    'donations',
 ]
 
 MIDDLEWARE = [
