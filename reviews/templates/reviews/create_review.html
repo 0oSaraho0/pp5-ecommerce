@@ -1,0 +1,14 @@
+<div class="conatainer"></div>
+
+        <h3>Please write a review:</h3>
+        <!-- commenter username-->
+        <p>Posting as: {{ user.username }}</p>
+        <!-- Comment form -->
+        <form method="post" style="margin-top: 1.3em;">
+            {{ form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn button btn-signup btn-lg">Submit</button>
+        </form>
+
+
+</div>
