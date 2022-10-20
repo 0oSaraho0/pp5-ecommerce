@@ -4,7 +4,41 @@ body {
 
     background-color: lightgray;
 
+}
+
+.blog-name-link{
+    color: #555;
+}
+
+.blog-name-link:hover {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(64, 64, 64);
+}
+
+.blog-post-link {
+    padding: 5px;
+    color: #555;
+    border: 2px solid;
+    border-color: #555;
+    border-radius: 8px;
+}
+
+
+
+.blog-post-link:hover {
+    padding: 6px;
+    color: rgb(64, 64, 64);
+    border: 3px solid;
+    border-color: rgb(64, 64, 64);
+    text-decoration: none;
+    border-radius: 8px;
+}
 /* blog detail  */
+
+.delete-blog {
+    margin-left: 7px;
+
 }
 
 .header-container {

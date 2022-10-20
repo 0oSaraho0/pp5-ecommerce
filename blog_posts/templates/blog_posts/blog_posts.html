@@ -19,10 +19,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h1>Blog</h1>
-            <p>
-                <a href="{% url 'create_blog_post' %}">Create a Blog Post</a>
-            </p>
+            <span class="text-center">
+                <h1>Blog</h1> 
+                {% if request.user.is_superuser %}
+                <p>
+                    <a class="blog-post-link" href="{% url 'create_blog_post' %}">Create a Blog Post</a>
+                </p>
+                {% endif %}
+            </span>
         </div>
     </div>
     
@@ -46,7 +50,7 @@
                                 {% endif %}
                                 <!-- Activity name and link to  detail page -->
                                 <a href="{% url 'blog_post_detail' blogpost.id %}" class="blog-link">
-                                <h2 class="card-title">{{ blogpost.event_name }}</h2>
+                                <h2 class="card-title blog-name-link">{{ blogpost.event_name }}</h2>
                             </a>
                             <hr>
                             <!-- date blog post was updated -->

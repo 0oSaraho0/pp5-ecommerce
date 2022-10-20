@@ -19,19 +19,21 @@
 <div class="masthead">
     <div class="container pic-padding card">
         <div class="row g-0">
-            <p>
-                <a href="{% url 'edit_blog_post' blogpost.id %}" class="edit-blog" aria-label="Click to edit idea">
-                    Edit your blog
-                </a>
-            </p>
-            <p>
-                <a href="{% url 'blog_post_delete' blogpost.id %}" class="delete-blog" aria-label="Click to delete idea">
-                    Delete your blog
-                </a>
-            </p>
+            
             <div class="col-12 text-center">
                 <h1 class="post-title"> {{ blogpost.event_name }}</h1>
                 <h2 class="post-title">We raised <strong>{{ blogpost.donation }}</strong> for {{ blogpost.charity_name }}</h2>
+                {% if request.user.is_superuser %}
+                <p>
+                    <a class="blog-post-link" href="{% url 'edit_blog_post' blogpost.id %}" class="edit-blog" aria-label="Click to edit idea">
+                        Edit your blog
+                    </a>
+                
+                    <a class="blog-post-link delete-blog" href="{% url 'blog_post_delete' blogpost.id %}"  aria-label="Click to delete idea">
+                        Delete your blog
+                    </a>
+                </p>
+                {% endif %}
             </div>
         </div>
         <div class="row g-0">
