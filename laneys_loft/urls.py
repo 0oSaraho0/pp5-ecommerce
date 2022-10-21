@@ -29,4 +29,6 @@ urlpatterns = [
     path('profiles/', include('profiles.urls')),
     path('blog_posts/', include('blog_posts.urls')),
     path('reviews/', include('reviews.urls')),
+    path('donations/', include('donations.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
