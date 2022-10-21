@@ -13,8 +13,7 @@ class BlogPostList(ListView):
     template_name = 'blog_posts/blog_posts.html'
     paginate_by = 6
     
-
-
+    
 class BlogPostDetailView(DetailView):
     """ A view to see the blog post details"""
     model = BlogPost
@@ -39,6 +38,7 @@ class BlogPostCreateView(SuperuserRequiredMixin, CreateView):
 
         messages.success(self.request, 'Idea created successfully')
         return super(BlogPostCreateView, self).form_valid(form)
+
 
 class EditBlogPostView(SuperuserRequiredMixin, UpdateView):
     """ A view to edit an idea """
@@ -67,8 +67,3 @@ class BlogPostDelete(DeleteView):
     def get_object(self):
         id_ = self.kwargs.get("id")
         return get_object_or_404(BlogPost, id=id_)
-
-    
-
-
-
