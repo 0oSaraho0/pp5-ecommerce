@@ -24,7 +24,7 @@ class BlogPostDetailView(DetailView):
         return get_object_or_404(BlogPost, id=id_)
 
 
-class BlogPostCreateView(SuperuserRequiredMixin, CreateView):
+class BlogPostCreateView(CreateView):
     """ A view to create an idea """
 
     form_class = BlogPostForm
