@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from braces.views import SuperuserRequiredMixin
 from django.contrib import messages
 from .models import BlogPost 
 from .forms import BlogPostForm   
@@ -40,7 +39,7 @@ class BlogPostCreateView(SuperuserRequiredMixin, CreateView):
         return super(BlogPostCreateView, self).form_valid(form)
 
 
-class EditBlogPostView(SuperuserRequiredMixin, UpdateView):
+class EditBlogPostView(UpdateView):
     """ A view to edit an idea """
 
     Model = BlogPost
