@@ -10,7 +10,7 @@ class Review(models.Model):
 
     class Meta:
         """ Order by created on date """
-        ordering = ["created_on"]
+        ordering = ["-created_on"]
 
     def __str__(self):
         return f"Comment {self.review} by {self.user}"

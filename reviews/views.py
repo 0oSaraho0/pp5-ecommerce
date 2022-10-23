@@ -9,9 +9,8 @@ from django.contrib import messages
 class ReviewList(ListView):
     """ A view to return a list of reviews"""
     model = Review
-    queryset = Review.objects.order_by('created_on')
+    queryset = Review.objects.order_by('-created_on')
     template_name = 'reviews/reviews.html'
-    paginate_by = 6
     context_object_name = 'reviews'
 
 
