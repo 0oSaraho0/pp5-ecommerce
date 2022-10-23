@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 html {
     height: 100%;
@@ -10,10 +10,28 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Shippori Antuque';
+    background-color: lightgrey;
 }
 
+/* Main Nav */
+
+.rounded {
+    border-radius: 10px;
+}
+
+.mt-auto, .my-auto {
+    margin-top: 0!important;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+    background-color: white;
+}
+
+
 #topnav {
-    line-height: 0;
+    line-height: 1.5rem;
 }
 
 /* from Bulma */
@@ -27,7 +45,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    font-family: 'Shippori Antique', sans-serif;
+    font-family: 'Alfa Slab One', sans-serif;
 }
 
 .main-logo-link {
@@ -186,4 +204,23 @@ toast-capper {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Mainchimp CSS */
+
+#mc_embed_signup {
+    background:#fff; 
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;  
+    width:600px;
+
+}
+
+.my-mailchimp {
+    display:flex;
+    justify-content: center;
+}
+
+.head-mailchimp {
+    background-color: white;
 }
