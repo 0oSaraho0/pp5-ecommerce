@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 
@@ -14,31 +13,36 @@
     </div>
 {% endblock %}
 {% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <span class="write-review text-center">
+                    <p>We would live to hear from you. All suggestions and comments are welcomed! 
+                    </p>
+                    <a class="write-review-link text-center" href="{% url 'create_review' %}"><strong>Please write a review</strong></a>
+                </span>
+            </div>
+        </div>
+    </div>
+
     {% for review in reviews %}
-        <div class="container">
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                <div class="card text-center " style="width: 122rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ review.title }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ user.username }}</h6>
-                            <p class="card-text">{{ review.review }}</p>
-                            <p class="card-text">{{ review.created_on}}</p>
-                    
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div class="card text-center review-body" style="width: 122rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>{{ review.title }}</strong></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ user.username }}</h6>
+                        <p class="card-text"><strong>"{{ review.review }}"</strong></p>
+                        <p class="card-text">{{ review.created_on}}</p>
                     </div>
                 </div>
             </div>
         </div>
-    {% endfor %}
-<div class="row">
-    <div class="col">
-        <p>
-            <a href="{% url 'create_review' %}">Please write a review</a>
-        </p>
     </div>
-</div>
+    <br>
 
-
+    {% endfor %}
 
 {% endblock %}
