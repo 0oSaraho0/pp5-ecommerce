@@ -87,6 +87,21 @@ body {
     min-width: 260px;
 }
 
+/* Footer */
+
+.footer_links {
+    color: white;
+    padding-left: 10px;
+}
+
+.footer_links:hover {
+    color: white;
+    padding-left: 10px;
+    text-decoration: none;
+    
+}
+
+
 /* Reviews page */
 
 .review-body {
