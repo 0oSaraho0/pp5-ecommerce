@@ -15,7 +15,7 @@ class MakeDonation(CreateView):
 
     def form_valid(self, form):
         messages.success(
-            self.request, 'Collection request successfully recieved.' 
+            self.request, 'Collection request successfully recieved.'
             'Thank you for your donation')
         return super(MakeDonation, self).form_valid(form)
 
@@ -25,5 +25,3 @@ class DonationConfirmation(TemplateView):
     View to render donataion collection confirmation
     """
     template_name = 'donations/donation_confirmation.html'
-
-

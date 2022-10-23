@@ -14,7 +14,7 @@ def add_to_bag(request, bag_item_id):
 
     item = get_object_or_404(Item, pk=bag_item_id)
     quantity = 1
-    
+
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
@@ -30,7 +30,7 @@ def add_to_bag(request, bag_item_id):
 
 def remove_from_bag(request, bag_item_id):
     """ Remove item from bag """
-    
+
     item = get_object_or_404(Item, pk=bag_item_id)
     bag = request.session.get('bag', {})
     bag.pop(bag_item_id)
@@ -38,4 +38,3 @@ def remove_from_bag(request, bag_item_id):
     request.session['bag'] = bag
     messages.success(request, f"{item.name} has been successfully removed")
     return redirect(reverse('view_bag'))
-

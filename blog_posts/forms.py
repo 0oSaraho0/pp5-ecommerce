@@ -1,7 +1,6 @@
 
 from .models import BlogPost
 from django import forms
-# from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 class BlogPostForm(forms.ModelForm):
@@ -16,6 +15,3 @@ class BlogPostForm(forms.ModelForm):
             'charity_website',
             'summary',
         )
-        # widgets = {
-        #     'review': SummernoteWidget()
-        # }

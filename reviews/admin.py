@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Review
 
 
-
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     """ A class to display a review items admin """

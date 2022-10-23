@@ -16,7 +16,7 @@ class Donation(models.Model):
     collection_date = models.DateTimeField(auto_now_add=False)
     donation_description = models.TextField(blank=True)
     number_of_bags = models.IntegerField(validators=[MinValueValidator(0),
-                                            MaxValueValidator(50)])
+                                         MaxValueValidator(50)])
 
     def __str__(self):
         return self.donation_description

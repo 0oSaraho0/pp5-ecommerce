@@ -1,6 +1,8 @@
 
 from django.contrib import admin
-from .models import Category, BrandOrAuthor, Colour, ClothesType, Size, KidsAge, Item
+from .models import (
+    Category, BrandOrAuthor, Colour, ClothesType, Size, KidsAge, Item)
+
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
@@ -15,15 +17,17 @@ class ItemAdmin(admin.ModelAdmin):
         'description',
         'price',
         'quality',
-        'image'   
+        'image',
     )
     ordering = ('sku',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name'
     )
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(BrandOrAuthor)
