@@ -10,17 +10,43 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container h-100" >
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1>Buy and donate to help those in need</h1>
+            <div class="buy-and-donate col-7 col-md-6 my-auto">
+                <h1>Buy And Donate Your Preloved Clothes And Kids Toys</h1>
             
                 <div class="my-5">
                     <h4>
-                        <a href="{% url 'items' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                        <a href="" class="donate-now-button btn btn-lg rounded-0 text-uppercase py-3">Donate Now</a>
+                        <a href="{% url 'items' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
+                        <a href="{% url 'donations' %}" class="donate-now-button btn btn-lg text-uppercase py-3">Donate Now</a>
                     </h4>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container h-25">
+        <div class="row h-25">
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div class="container h-56 about-us g-0">
+        <div class="row h-56 about-us-width">
+            <div class="col-12">
+                <h2>About Laneys Loft</h2>
+                <p>Laney loft is a family run business.  We were born out of lockdown.  
+                    Like everyone else we had alot of spare time on our hands and decided to have 
+                    a good old clear out.  All of the charity shops were closed so we decided to set up our
+                    own on3 online and raise money for local charitys.
+                </p>
+                <p>Since then we have grown extensively and we now take donations of preloved clothes snd 
+                    childrens toys from people all over the country.
+                </p>
+                <p>Please take some time to look through our site, buy some second had items or complete 
+                    the donations form and arrange a collection of your own stuff.
+                </p>
+
             </div>
         </div>
     </div>

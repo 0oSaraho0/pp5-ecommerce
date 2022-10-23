@@ -57,6 +57,26 @@ body {
     width: fit-content;
 }
 
+
+/* Home Page */
+
+.buy-and-donate{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+}
+
+
+.about-us {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.about-us-width {
+    width: 100%;
+}
+
 .shop-now-button {
     background: black;
     color: white;
@@ -126,7 +146,7 @@ a.category-badge > span.badge:hover {
     z-index: 999999999;
 }
 
-.custon-toast {
+.custom-toast {
     overflow: visible;
 
 }
