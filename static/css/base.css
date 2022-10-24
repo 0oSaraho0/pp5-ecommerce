@@ -139,6 +139,8 @@ body {
 .btn-black {
     background: black;
     color: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .shop-now-button:hover,
@@ -186,6 +188,7 @@ a.category-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    border-radius: 15px;
 }
 
 .btt-link {
@@ -375,8 +378,4 @@ toast-capper {
 
 .container-bottom {
     padding-bottom: 196px;
-}
-
-.sign-in-margin-bottom {
-    margin-botton: 50px
 }
