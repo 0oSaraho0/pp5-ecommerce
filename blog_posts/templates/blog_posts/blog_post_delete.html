@@ -9,15 +9,16 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container header-container-delete-blog">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
 {% endblock %}
 
+<div class="overlay"></div>
 
-<div class="row col-md-8 offset-md-2 delete-idea">
+<div class="row col-md-8 offset-md-2">
     <div class="col-md-8 offset-md-2 p-3">
         <!-- Delete idea headig -->
         <h1 class="text-center">Delete Blog Post</h1>
@@ -26,7 +27,7 @@
             <form method="post" class="text-center p-5">
                 {% csrf_token %}
                 <p>Are you sure you want to delete "{{ blogpost.event_name }}"?</p>
-                <input type="submit" value="Confirm" class="button">
+                <input type="submit" value="Confirm" class="button btn-black">
             </form>
         </div>
     </div>

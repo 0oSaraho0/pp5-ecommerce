@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-{% endblock %}
+</div>
+
+
+<div class="overlay"></div>
+
 
 <div class="container">
     <!-- Edit idea form heading and information -->
@@ -30,7 +32,7 @@
         {{ form|crispy }}
         {{ form.media }}
 
-        <input class="button" type="submit" value="Submit">
+        <input class="button btn-black" type="submit" value="Submit">
     </form>
 
 </div>

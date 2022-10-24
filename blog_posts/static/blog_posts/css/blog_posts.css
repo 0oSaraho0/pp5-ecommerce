@@ -48,6 +48,9 @@
 .header-container {
     padding-top: 164px;
 }
+.header-container-delete-blog{
+    padding-top: 90px;
+}
 
 .edit-blog {
     text-align: right;
@@ -82,6 +85,10 @@
     .header-container {
         padding-top: 147px;
     }
+    .header-container-delete-blog {
+        padding-top: 122px;
+    }
+    
 }
 
 @media (min-width: 542px) {

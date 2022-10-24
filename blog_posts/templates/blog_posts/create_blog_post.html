@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-{% endblock %}
+</div>
 
 
-
+<div class="overlay"></div>
 <div class="container">
     <!-- Create form header and information -->
     <h1>Add a Blog Post</h1>
@@ -29,7 +27,7 @@
         {{form | crispy}}
     
 
-        <button class="button" type="submit" class="btn-lg">Submit</button>
+        <button class="button btn-black" type="submit" class="btn-lg">Submit</button>
 
 
 
