@@ -163,19 +163,17 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    # item_quantity = get_object_or_404(Item,)
-    # bag = request.session.get('bag', {})
-    # for bag_item_id, item_data in bag.items():
-    #     item = Item.objects.get(sku=bag_item_id)
-    #     item_quantity = item_quantity - item
+    # Reduce item by 1 after sold
+    bag = request.session.get('bag', {})
+    for bag_item_id, item_data in bag.items():
+        item = Item.objects.get(sku=bag_item_id)
+        item.quantity = item.quantity - 1
+        item.save()
 
-    #     item_quantity.save()
-    # remove bag from checkout bag
-
+    # Remove bag from session
     if 'bag' in request.session:
-
         del request.session['bag']
-
+    
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
