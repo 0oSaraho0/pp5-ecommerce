@@ -1,6 +1,6 @@
 
+
 {% extends "base.html" %}
-{% block content %}
 {% load crispy_forms_tags %}
 {% load static %}
 
@@ -17,7 +17,8 @@
 {% endblock %}
 
 
-
+{% block content %}
+<div class="overlay"></div>
 <div class="container">
     <!-- Create form header and information -->
     <h1>Please complete the form below and we will collect your preloved items from you at a convenient time</h1>
@@ -28,14 +29,9 @@
 
         {{form | crispy}}
     
-
         <button class="button" type="submit" class="btn-lg">Submit</button>
-
-
-
-
-
-
     </form>
 </div>
+
+
 {% endblock %}
