@@ -22,7 +22,7 @@
             
             <div class="col-12 text-center">
                 <h1 class="post-title"> {{ blogpost.event_name }}</h1>
-                <h2 class="post-title">We raised <strong>{{ blogpost.donation }}</strong> for {{ blogpost.charity_name }}</h2>
+                <h2 class="post-title">We raised <strong>£{{ blogpost.donation_amount }}</strong> for {{ blogpost.charity_name }}</h2>
                 {% if request.user.is_superuser %}
                 <p>
                     <a class="blog-post-link" href="{% url 'edit_blog_post' blogpost.id %}" class="edit-blog" aria-label="Click to edit idea">
