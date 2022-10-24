@@ -228,6 +228,8 @@ The checkout page has an easy to complete form that takes the users name, addres
 
 It also has a tickbox to save the details to the profile page so it will be prefilled the next time they buy something.
 
+Dispite the rest of the boxes on the site having rounded edges, I decided to keep the checkout boxes with sharp edges.  This is because it feels like a more important/trustworthy shape for an important transaction.
+
 ### Order Confirmation 
 
 - As a shopper I want to see confirmation that my payment has gone through successfully and that my purchase is being sent to the correct address so that I know it has been done correctly
@@ -240,21 +242,18 @@ Once the order has been processed a confirmation page tells the user the order d
  - As a user I want to be able to access a profile page so that I can update my orders
  - As a user I want to be able to update my details if I move house.
 
+![checkout 2](/media/profile-page.png)
 
-
-
+The profile page has the users address details available to edit if necessary.  It also has a record of all of past shopping orders.
 
 ## Features left to impliment
 
-- I had planned to add a profile page where the user could add their picture and details about themselves.  This would also show all their ideas in one place for easy editing or deleting. Unfortunately, I ran out of time to add this feature 
+There were a few items that would have been really nice to include, that I included in my user stories but unfortunately I ran out of time.
 
-- Once the profile page was in place I could add an option to show the creator’s picture as well as their name on their ideas.
+- I wanted to add the donation details to the profile page as well as the orders so that user could have a record of this as well. 
+- I wanted to add a star rating system to the reviews page. This would have been a nice extra visual to see what people though of the site.
+- I wanted to add replies to the reviews page so that the site owner could reply to customers and solve problems they have, this would add extra user experience value and would deffinately be in the next update if there was one.
 
-- I had also planned to add search options on the brows ideas page allowing users to search by Activity name, location, price or age range.
-
-- In a future development I would like to add CRUD functionality to the comments section and to enable users to comment on comments so more social interaction could be had.
-
-- The site could also be taken further with a social development where users could arrange meet ups and get together in person.
 
 # Wireframes
 
