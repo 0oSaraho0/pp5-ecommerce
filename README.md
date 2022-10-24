@@ -246,10 +246,24 @@ Once the order has been processed a confirmation page tells the user the order d
 
 The profile page has the users address details available to edit if necessary.  It also has a record of all of past shopping orders.
 
+
+### Blog
+User stories:
+- As a site user I want to be able to see where the money from the site is being sent so I can feel good about my purchases
+- As a site owner I want to easily be able to add blog entries onto the Site
+- As a site owner I want to be able to edit my blog posts so that I can make corrections easily
+- As a site owner I want to be able to delete blog posts as necessary.
+- As a site owner I want to be the only one who can create edit and delete blog posts
+
+The blog page shows a list of blog posts that have been entered by the site owner. 
+![blog](media/blog.jpg)
+
+The create a blog post button is only visible to the superuser
+![blog](media/blog-not-superuser.png)
+
 ## Features left to impliment
 
 There were a few items that would have been really nice to include, that I included in my user stories but unfortunately I ran out of time.
-
 - I wanted to add the donation details to the profile page as well as the orders so that user could have a record of this as well. 
 - I wanted to add a star rating system to the reviews page. This would have been a nice extra visual to see what people though of the site.
 - I wanted to add replies to the reviews page so that the site owner could reply to customers and solve problems they have, this would add extra user experience value and would deffinately be in the next update if there was one.
