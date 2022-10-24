@@ -10,7 +10,7 @@ from .models import Item, Category
 def all_items(request):
     """ A view to show all products, including sorting and search queries """
 
-    items = Item.objects.all()
+    items = Item.objects.filter(quantity__gte=1)
     query = None
     categories = None
     sort = None
