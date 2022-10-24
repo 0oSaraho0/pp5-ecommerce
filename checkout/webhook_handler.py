@@ -26,13 +26,13 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )   
+        )
 
     def handle_event(self, event):
         """
@@ -92,7 +92,7 @@ class StripeWH_Handler:
                     grand_total=grand_total,
 
                 )
-                order_exists = True 
+                order_exists = True
                 break
             except Order.DoesNotExist:
                 attempt += 1
@@ -118,7 +118,7 @@ class StripeWH_Handler:
                     county=shipping_details.address.state,
                 )
                 for bag_item_id, item_data in json.loads(bag).items():
-                    item = Item.objects.get(sku=bag_item_id)                   
+                    item = Item.objects.get(sku=bag_item_id)
                     order_line_item = OrderLineItem(
                         order=order,
                         item=item,
