@@ -13,7 +13,7 @@ class Donation(models.Model):
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
-    collection_date = models.DateTimeField(auto_now_add=False)
+    collection_date = models.CharField(max_length=100, null=False, blank=False)
     donation_description = models.TextField(blank=True)
     number_of_bags = models.IntegerField(validators=[MinValueValidator(0),
                                          MaxValueValidator(50)])
