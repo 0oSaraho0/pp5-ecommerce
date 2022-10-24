@@ -24,19 +24,19 @@ This project was developed using agile methodologies, delivering small features 
 
 My kanban board was made using github projects which can be viewed [here]().  Each view can be clicked in to obtain further information.
 
-![kanban](/static/images/kanban.png)
+![kanban](/media/pp5-kanban.png)
 
 The user stories were grouped into different Epics
 
 Epic 1 - Set up
 
-The base setup of the Django app was done first as nothing else can be completed before this is done. I completed the base html, the header and footer. I also included deployment in this section so as to avoid complications at the end.
+The base setup of the Django app was done first as nothing else can be completed before this is done. I completed the base html, and the header. 
 
 Epic 1 user stories
 
 - As a developer, I need to set up the project so that it is ready for implementing core features
 - As a developer, I want to create a base HTML page so that all pages can use the same format.
-- As a user, I want to be able to navigate easily around the site easily on my mobile
+- As a user, I want to be able to navigate easily around the site easily from any device
 
 
 Epic 2 - Products and shopping bag
@@ -49,7 +49,7 @@ Epic 2 User Stories
 - As a shopper, I want to be able to click into a product to view its details so I can see what size it is etc
 - As a user I want to be able to view what I have added to my shopping bag and the total price
 - As a user I want to be able to delete items from my bag when I decide I no longer want something.
-- As a user I want to receive a confirmation when I have made changes ie, adding and removing items to my bag or logging in and out so that I know when a change has been completed.
+- As a user I want to receive a confirmation when I have made changes ie, adding and removing items to my bag so that I know when a change has been completed.
 
 Epic 3 - payment and purchase confirmation emails.
 
@@ -59,12 +59,19 @@ Epic 3 User Stories
 - As a shopper I want to see confirmation that my payment has gone through successfully and that my purchase is being sent to the correct address so that I know it has been done correctly
 - As a shopper I want laneys loft to send me an email so that I can keep confirmation of purchase for my own records.
 
-Epic 4 - Profile Page
+Epic 4 Allauth
+User Stories
+- As a new user, I want to be able to sign up easily and intuitively
+- As a returning user, I want to be able to log in easily.
+- As a user, I want to be able to log out of the site safely and easily.
+- As a developer, I want to ensure the forms are all the same style and look good on all devices
+
+Epic 5 - Profile Page
  - As a user I want to be able to access a profile page so that I can update my orders
  - As a usder I want to see what donations I have made in the past
  - As a user I want to be able to update my details if I move house.
 
-Epic 5 - Blog
+Epic 6 - Blog
 
 - As a site user I want to be able to see where the money from the site is being sent so I can feel good about my purchases
 - As a site owner I want to easily be able to add blog entries onto the Site
@@ -73,9 +80,9 @@ Epic 5 - Blog
 - As a site owner I want to be the only one who can create edit and delete blog posts
 
 
-Epic 5 - Reviews
+Epic 7 - Reviews
 
-Epic 5 User Stories
+Epic 7 User Stories
 
 - As a user I would like to be able to read reviews about so I can decide if I want to use it
 - As a site user who is logged in I would like to be able to leave my own review so that I can tell others about my experience
@@ -83,25 +90,34 @@ Epic 5 User Stories
 - As a site owner it would be nice to be able to reply to reviews to show a personal touch
 
 
+Epic 8 Donations
 
+- As a user I want to be able to arrange for my donated items to be picked up easily.
 
+Epic 9 Footer
 
-Epic 6 - Documentation
+Epic 9 User Stories
 
-Epic 6 Tasks
+- As site owner, I want to share social media links and contact details
+- As site owner I want a nav bar for the site extras such as the blog, reviews and subsribe pages
 
+Epic 10 - Documentation and styling
+
+Epic 10 Tasks
+
+- Complete Styling on all pages and all screen sizes
 - Complete Readme documentation
 - Complete testing and writeup
 
 ## Scope
 - Responsive Design
-- Home page with information about Kidsbored
-- Ability to perform CRUD functionality on ideas
-- Restricted features for not logged in users
+- Home page with information about Laneys Loft
+- Ability to perform CRUD functionality on the Blog
+- Restricted features for not logged in as users and superusers
 
 ## Structure
 
-### Kidsbored Features
+### Laneys Loft Features
 
 Navbar
 
@@ -109,112 +125,124 @@ user story - As a user I want to be able to navigate easily around the site easi
 
 Navigation Menu
 
-When the user is not logged in the navigation menu links to the Home page Browse Ideas page and the Sign in page
+from the main top navigation bar the user can log in or sign in.  Once logged in they can access their profile page.
+They can browse all the site products and check their shopping bag.  They can also search the site using the search bar.
 
-![Navbar before login](/static/images/navbar-before-login.png)
+The superuser can also view the Product Management section to manage the store items.
 
-Once the user has signed in the navigation menu changes to Home, Browse Ideas, Create Idea and Log out
+![Navbar full size nav bar](/media/full-size-nav-bar.png)
 
-The user will also receive a toast message saying they have successfully signed in.
+on mobile devices they shopping navigation collapses into a dropdown square and the search bar drops down to a magnifie glass search icon
 
-![Navbar](/static/images/navbar.png)
-
-The sign in, log in, log out pages were made using allauth.
-
-on smaller devices, the menu options collapse into a button
-
-![Mobile Navbar](/static/images/mob-navbar.png)
+![mobile nav bar](/media/mobile-nav-bar.png)
 
 ### Home Page
 
 - User Story - As a user I want the front page to be clear and self-explanatory so I know I am in the right place
 
-The front page contains a hero image of some happy children eating ice cream.  This will make it evident to the user that the website is for children.
+The front page contains an image of a charity shop.  This gives the initial impression of pre loved goods.
+![Hero Image](/media/homepage_background_cropped.jpg)
+The front page also containes a tag line advising the user they can shop or donate with a button to take them to either place on the website.  This gives an imediate idea of what the website is for.
 
-![Hero Image](/static/images/hero-image-for-readme.png)
+![tag line](/media/front-page-tag-line.png)
 
-Under this is information about the site and how to share and browse activity ideas.
 
-![Welcome Text](/static/images/welcome-text.png)
+Under this is information about the site and how to shop or donate.
+
+![Welcome Text](/media/about-laneys-loft.png)
 
 ### Footer
 
 - User Story: As site owner, I want to share social media links and contact details
+- User Story : As site owner I want a nav bar for the site extras such as the blog, reviews and subsribe pages
 
-The Footer has been added to the bottom of the site and contains links to social media sites so that users can also share their ideas and promote the site via social media.
+The Footer has been added to the bottom of the site and contains links the sites blog, reviews and donations form.  Users can also subscribe the sites news letter from here.
 
-![Footer](/static/images/kidsbored-footer.png)
+underneath the footer navigation bar users can see the contact email for the site and links to the social media pages.
 
-### Browse Ideas
+![Footer](/media/laneysloft-footer.png)
 
-- User Story: As a user that is not logged in, I want to be able to browse ideas from other users.
+### Browse Items
 
-Anybody can use the website to browse ideas, they are shown in the browse ideas page with the activity title and pictures in rows of 3.  The activity Title is a link to open up each activity with further information about it.
+- User Story: As a shopper, I want to view a list of products so that I can select something to buy
 
-![Brows Ideas Page](/static/images/browse-ideas.png)
+Users can easily brows items to buy, products come up in rows of 4 on the larges screen and they reduce down to 3,2 then 1 depending on screen size. 
 
-### Idea Detail 
+Users can also search by womens, mens and kids items. They can also pick from a dropdown list of different clothing types to refine their search further.
 
-- User Story: As a user, I want to be able to comment and like otherpeople’s ideas
+Users can also search by price.  They can also search for specific words in the search bar at the top of the page
 
-Each user story opens up to a full page which contains the image, a link to the activity website if applicable, the age range the activity is aimed at, activity cost per person, the location of the activity and a review.
+![Brows Items Page](/static/images/browse-ideas.png)
+
+### Item Detail 
+
+- As a shopper, I want to be able to click into a product to view its details so I can see what size it is etc
+
+Users can select see more detail about an item by clicking on the picture.  This takes them to a detail page where they can then add it to their basked if they wish
+
 
 ![Detail Page](/static/images/detail-page.png)
 
-Logged-on users can also comment on and like the ideas.
-
-![comments](/static/images/comments.png)
 
 ### Sign in, log in, log out
 
-User Stories
 - As a new user, I want to be able to sign up easily and intuitively
 - As a returning user, I want to be able to log in easily.
 - As a user, I want to be able to log out of the site safely and easily.
 - As a developer, I want to ensure the forms are all the same style and look good on all devices
 
-Users can sign in and out using various forms and confirmation pages. These forms were made using allauth and edited using bootstrap
+![log in](/media/sign-in-form.png) ![log in](/media/sign-out-form.png) ![log in](/media/register-form.png)
 
-![Sign in page](/static/images/sign-in-page.png)
+The sign in, log in, log out pages were made using allauth.
+They all have a white background with round corner buttons and input boxes.
+They all have greay writing.  This crates continuity within the authorisation section of the site.  I have made them on a white background rather than gray so that they are slightly different from the other ones on the site but they still keep the font style for the title to connect them with the test of the site.
 
-![Sign up Page](/static/images/sign-up.png)
+The user will receive a toast message saying they have successfully signed in and out.
 
-![Sign out page](/static/images/sign-out.png)
+![log in toast](/media/sign-in-success.png) ![log out toast](/media/sign-out-success.png)
 
-As you can see all of the sign in out pages have a similar design to them, with the dark writing on the white background.  
-
-I went with a light background and dark writing for the log in/out pages and the reverse for the  Create, Edit and Delete pages, but kept the styling the same.  This connects the forms throughout the website but differentiates between the two areas
-
-### Create Idea
-
-- User Story: As a user, I want to be able to input my own ideas of things to do into the site in an easy and intuitive way so that I can easily share ideas with others
-
-Once the user is logged in they can create their own idea using the create Idea form.  The forms were made using crispy forms which were used in conjunction with bootstrap.
-
-The picture below is from a mobile view.  You can see that the forms colapse down so they can easily be used on a mobile device.
-
-![Create idea form](/static/images/create-idea-form.png)
-
-### Edit and Delete Idea
+### Shopping Bag
 
 User Stories
-- As a user, I want to be able to edit ideas I have created
-- As a user, I want to be able to delete ideas that I have created
-- As the site owner I want to ensure only the creator of an idea can edit or delete it
+- As a user I want to be able to view what I have added to my shopping bag and the total price
+- As a user I want to be able to delete items from my bag when I decide I no longer want something.
+- As a user I want to receive a confirmation when I have made changes ie, adding and removing items to my bag so that I know when a change has been completed.
 
-The creator of an idea will be able to view edit and delete icons on their idea detail page.  The edit button will take them to the create idea form but it will be pre-populated with information that is already saved.  The user can then update the information and save it again where they will be redirected back to the ideas page.
+![shopping Bag](/media/shopping-bag.png)
 
-They will get a toast message to advise them that their creation/edit has been successful
+The shopping bag shows a picture of the itme(s) in the bag along with the item name, price, quantity (although it is only ever one because there is only one of each item) and the price.  There is also a delete button so items can be deleted easily.
 
-![Edit Idea](/static/images/edit-idea.png)
+When items are added or deleted from the basked a success message appears that contains the bag content and a link to the checkout page.
 
-The delete button will take the user to a confirmation page asking them to confirm they wish to delete that idea.  Once an idea is deleted all comments will be deleted with it.
+![shopping Bag](/media/add-item-to-basket.png) ![shopping Bag](/media/remove-item-from-basket.png)
 
-![Delete Idea](/static/images/delete-idea.png)
+### Checkout Page
 
-The delete and edit views use LoginRequiredMixin and UserPassesTestMixin to ensure that only the idea creator who is logged in can update or delete their idea.
+User Stories
+- As a shopper I want to be able to easily enter my payment details so that I can purchase my chosen items easily.
 
-![edit and delete](/static/images/edit-and-delete.png)
+![checkout 1](/media/checkout-1.png)
+![checkout 2](/media/checkout-2.png)
+
+The checkout page has an easy to complete form that takes the users name, address and card details. It also has a summary of the purchase to confirm what is being bought.
+
+It also has a tickbox to save the details to the profile page so it will be prefilled the next time they buy something.
+
+### Order Confirmation 
+
+- As a shopper I want to see confirmation that my payment has gone through successfully and that my purchase is being sent to the correct address so that I know it has been done correctly
+- As a shopper I want laneys loft to send me an email so that I can keep confirmation of purchase for my own records.
+
+Once the order has been processed a confirmation page tells the user the order details.  It also advises an email has been sent to the email address provided.
+
+### Profile Page
+
+ - As a user I want to be able to access a profile page so that I can update my orders
+ - As a user I want to be able to update my details if I move house.
+
+
+
+
 
 ## Features left to impliment
 
