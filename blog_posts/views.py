@@ -36,7 +36,7 @@ class BlogPostCreateView(CreateView):
     def form_valid(self, form):
         """ If form is valid return to browse ideas """
 
-        messages.success(self.request, 'Idea created successfully')
+        messages.success(self.request, 'Blog post created successfully')
         return super(BlogPostCreateView, self).form_valid(form)
 
 
