@@ -5,7 +5,7 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'blog_posts/css/blog_posts.css' %}">
 {% endblock %}
-
+<!-- headr container for spacing -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -19,10 +19,10 @@
 <div class="masthead">
     <div class="container pic-padding card">
         <div class="row g-0">
-            
             <div class="col-12 text-center">
                 <h1 class="post-title"> {{ blogpost.event_name }}</h1>
                 <h2 class="post-title">We raised <strong>£{{ blogpost.donation_amount }}</strong> for {{ blogpost.charity_name }}</h2>
+                <!-- Buttons for superuser to delete and edit post -->
                 {% if request.user.is_superuser %}
                 <p>
                     <a class="blog-post-link" href="{% url 'edit_blog_post' blogpost.id %}" class="edit-blog" aria-label="Click to edit idea">
@@ -40,7 +40,7 @@
             <div class="d-md-block col-md-12 card">
                 {% if "placeholder" in idea.picture.url %}
                 <!-- placeholder picture -->
-                <img class="card-img-top border border-light blog-detail-pic" src="" alt="">
+                <img class="card-img-top border border-light blog-detail-pic" src="{{MEDIA_URL}}blog-pic.png" alt="">
                 {% else %}
                 <!-- uploaded picture -->
                 <img class="card-img-top border border-light blog-detail-pic" src="{{ blogpost.image.url }}" alt="">
@@ -70,6 +70,6 @@
             </div>
         </div>
     </div>
-
+</div>
 
 {% endblock content %}
