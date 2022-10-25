@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <span class="write-review text-center">
+                    <h1 class="logo-font">Reviews</h1>
                     <p>We would live to hear from you. All suggestions and comments are welcomed! 
                     </p>
                     <a class="write-review-link text-center" href="{% url 'create_review' %}"><strong>Please write a review</strong></a>
@@ -32,8 +33,8 @@
             <div class="col d-flex justify-content-center">
                 <div class="card text-center review-body" style="width: 122rem;">
                     <div class="card-body">
-                        <h5 class="card-title"><strong>{{ review.title }}</strong></h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ user.username }}</h6>
+                        <h2 class="card-title"><strong>{{ review.title }}</strong></h2>
+                        <p class="card-subtitle mb-2 text-muted">{{ user.username }}</p>
                         <p class="card-text"><strong>"{{ review.review }}"</strong></p>
                         <p class="card-text">{{ review.created_on}}</p>
                     </div>
