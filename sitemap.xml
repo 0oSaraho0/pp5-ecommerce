@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/bag/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?sort=quality&amp;direction=asc</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?sort=category&amp;direction=asc</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=skirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=womens_jeans</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=dress</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=womens_tshirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=skirt,women_jeans,dress,women_tshirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=shorts</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=mens_jeans</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=shirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=men_T-shirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=shorts,mens_jeans,shirt,men_tshirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=kids_shorts</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=Kids_trousers</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=kids_top</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=kids_dress_skirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=kids_shorts,kids_trousers_kids_top,kids_dress_skirt</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/items/?category=kids_toy</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/donations/donations/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/blog_posts/blog_posts/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/reviews/reviews/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/subscribe/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/blog_posts/9/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/blog_posts/12/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/blog_posts/11/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/login/?next=/reviews/create_review/</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/signup/?next=%2Freviews%2Fcreate_review%2F</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://pp5-laneys-loft.herokuapp.com/accounts/login/?next=%2Freviews%2Fcreate_review%2F</loc>
+  <lastmod>2022-10-25T13:38:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
