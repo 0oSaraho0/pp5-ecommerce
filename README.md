@@ -287,6 +287,13 @@ The user is then directed to a confirmatin screen and an email is sent confirmin
 
 Users can subscribe to the sites mailing list.  Mailchimp has been used to set up the mailing list and all the user needs to do is fill out their name and email address.
 
+## Facebook Page
+
+I set up my company facebook page and added the link to the facebook icon in the footer.
+
+Here is a screen shot of my page
+![reviews](media/facebook-page.png.png)
+
 
 
 ## Features left to impliment
@@ -505,6 +512,11 @@ It also correctly flagged an error when an incompolete email address was added.
 
 All of the social media icons correctly take to you their respective social media pages which open in a new page as expected.
 
+Emails
+
+I was correctly able to set up a new user, receive an email to confirm the email address of the user, click the link to the site and confirm the email address.
+I then logged in with an incorrect name and email for the user and both flagged errors correctly by the system. 
+
 
 ## Accessibility
 
@@ -522,13 +534,11 @@ All pages were run through the [w3 HTML validator](https://validator.w3.org/).  
 
 All issues were fixed and all pages ran through the checker with no errors.
 
-Due to the use of django language within the HTML files to complete this check I had to retrieve the html code from the open web page and right-click to view the source code.  I could then copy and paste this into the validator.
-
-![w3 HTML Validator](/static/images/html-check.png)
+![w3 HTML Validator](media/html-check.png)
 
 ## PP8 Validator
 
-All pages were run through the [PEP8 Validator  ](http://pep8online.com/).  There were some errors, for example, lines to long and whitespace. All issues were corrected and all pages apart from the settings.py page have passed.  The settings file contains code that is not mine so I did not change it.
+The pep8 validator was not working at the time of checking this project.  I checked in the terminal using linter and corrected all the items shown until it said no problems detected in workspace.  There were some long lines in the settings tab in Laneys Loft that I left because they were there already.
 
 ![PEP8 Validator](/static/images/pep8.png)
 
