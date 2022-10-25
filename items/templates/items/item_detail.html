@@ -18,10 +18,10 @@
                 <div class="image-container my-5">
                     {% if item.image %}
                         <a href="{{ item.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ item.name }}">
+                            <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="#">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                         </a>
                     {% endif %}
