@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
+                <h1 class="logo-font">Products</h1>
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'items' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -42,9 +42,9 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
+                        <p class="text mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'items' %}">Products Home</a> | </span>
+                                <span class="small text-black"><a href="{% url 'items' %}">Products Home</a> | </span>
                             {% endif %}
                             {{ items|length }} Items{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -69,7 +69,7 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ item.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
                                             {% if item.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'items' %}?category={{item.category.name }}">
