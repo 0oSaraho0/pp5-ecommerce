@@ -24,7 +24,38 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive rounded">
+                <div class="d-block d-md-none">
+                    <div class="row">
+                        <div class="col">
+                            {% include "bag/bag_total.html" %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {% include "bag/checkout_buttons.html" %}
+                            <p class="mb-5">A summary of your contents is below</p>
+                        </div>
+                    </div>
+                    {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include "bag/product_image.html" %}
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2">
+                            {% include "bag/product_info.html" %}
+                        </div>
+                        <div class="col-12 col-sm-6 order-sm-last">
+                            <p class="my-0">Quantity:{{ item.quantity }}</p>
+                            <p class="my-0">PriceL<strong>£{{ item.item.price }}</strong></p>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            {% include "bag/delete_item.html" %}
+                        </div>
+                    </div>
+                    <div class="row"><div class="col"><hr></div></div>
+                    {% endfor %}
+                </div>
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -32,7 +63,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col"></th>
                                     <th scope="col">Remove</th>
                                 </tr>
                             </thead>
@@ -43,8 +74,7 @@
                                         <img class="img-fluid rounded" src="{{ item.item.image.url }}">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.item.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.item.sku|upper }}</p>
+                                        {% include "bag/product_info.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.item.price }}</p>
@@ -53,42 +83,18 @@
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.item.price }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <form class="form" action="{% url 'remove_from_bag' item.bag_item_id %}" method="POST">
-                                            {% csrf_token %}
-                                        <span class="my-0"> <button class="btn btn-danger" type="submit"><small>Remove</small></button></span>
-                                        </form>
+                                        {% include "bag/delete_item.html" %}
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
+                                    {% include "bag/bag_total.html" %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
+                                    {% include "bag/checkout_buttons.html" %}
                                 </td>
                             </tr>
                         </table>

@@ -1,0 +1,10 @@
+
+{% if item.item.image %}
+<td class="p-3 w-25">
+    <img class="img-fluid rounded" src="{{ item.item.image.url }}" alt="{{ item.item.name }}">
+</td>
+{% else %}
+<td class="p-3 w-25">
+    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.item.name }}">
+</td>
+{% endif %}
