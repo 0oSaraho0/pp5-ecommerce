@@ -46,10 +46,10 @@
 }
 
 .header-container {
-    padding-top: 164px;
+    padding-top: 83px;
 }
 .header-container-delete-blog{
-    padding-top: 90px;
+    padding-top: 40px;
 }
 
 .edit-blog {
@@ -71,7 +71,9 @@
     font-size: 1.15rem;
 }
 
-
+.create-review-head {
+    font-size: 1.25rem!important;
+}
 
 
 
@@ -81,29 +83,12 @@
 
 /* Media Queries Blog Detail */
 
-@media (min-width: 384px) {
-    .header-container {
-        padding-top: 147px;
-    }
-    .header-container-delete-blog {
-        padding-top: 122px;
-    }
-    
-}
-
-@media (min-width: 542px) {
-    .header-container {
-        padding-top: 119px;
-    }
-}
 
 @media (min-width: 992px) {
     .header-container {
-        padding-top: 164px;
+        padding-top: 130px;
     }
 }
-
-
 
 
 /* fixed top navbar only on medium and up */

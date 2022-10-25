@@ -144,6 +144,26 @@ body {
     margin-bottom: 15px;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.button {
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -152,6 +172,7 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
+    border-radius: 15px;
 }
 
 .text-black {
@@ -174,8 +195,6 @@ body {
     position: fixed;
     background: white;
     z-index: -1;
-
-
 }
 
 a.category-badge > span.badge:hover {
@@ -195,6 +214,8 @@ a.category-badge > span.badge:hover {
 .btt-link {
     cursor: pointer;
 }
+
+/* message container */ 
 
 .message-container {
     position: fixed;
@@ -261,45 +282,6 @@ toast-capper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
-/* Adjust header container for screns over 408px */
-@media (min-width: 408px) {
-    .header-container {
-        padding-top: 100px;
-    }
-}
-
-/* Adjust header container for screns over 992px */
-@media (min-width: 992px) {
-    .header-container {
-        padding-top: 147px;
-    }
 }
 
 /* Mainchimp CSS */
@@ -379,4 +361,81 @@ toast-capper {
 
 .container-bottom {
     padding-bottom: 196px;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* Adjust header container for screens over 408px */
+@media (min-width: 408px) {
+    .header-container {
+        padding-top: 100px;
+    }
+}
+
+/* Adjust header container for screes over 992px */
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 147px;
+    }
+}
+
+
+/* adjust mobile header on small mobile */
+
+@media (max-width:991px) {
+    body{
+        height:calc(100vh - 116px);
+    }
+    
+    .display-4.logo-font.text-white {
+        font-size: 2rem;
+    }
+
+    .nav-link{
+        padding: 0.15rem;   
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .btn.btn-black.rounded-pill.rounded,
+    .btn.btn-black.rounded-pill.rounded {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-black.rounded-pill.rounded.btn-lg,
+    .btn.btn-black.rounded-pill.rounded.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
 }
