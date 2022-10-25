@@ -17,12 +17,14 @@
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <span class="write-review text-center">
-                    <h1 class="logo-font review-head">Reviews</h1>
-                    <p>We would live to hear from you. All suggestions and comments are welcomed! 
-                    </p>
-                    <a class="write-review-link text-center" href="{% url 'create_review' %}"><strong>Please write a review</strong></a>
-                </span>
+                <h1 class="logo-font-review">Reviews</h1>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col d-flex justify-content-center write-review text-center">
+                <p>We would live to hear from you. All suggestions and comments are welcomed!                    
+                    <a class="text-black" href="{% url 'create_review' %}"><strong>Please write a review</strong></a>
+                </p>
             </div>
         </div>
     </div>

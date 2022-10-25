@@ -64,7 +64,7 @@
                 <div class="col-12 col-lg-4 search-box my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0 ">
                         <li class="list-inline-item dropdown">
-                            <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="text-white nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
@@ -150,7 +150,7 @@
         <p class="m-0 text-center text-white" > contact us at laneysloft@google.com</p>
         <p class="m-0 text-center text-white">Follow us:
             <!-- Facebook link-->
-            <a class="social-links" href="https://www.facebook.com" target="_blank" rel="noopener"
+            <a class="social-links" href="https://www.facebook.com/profile.php?id=100086773137178" target="_blank" rel="noopener"
                 aria-label="Please visit our Facebook Page (opens in a new tab)">
                 <i class="fab fa-facebook-square ms-3"></i></a>
             <!-- Twitter link -->
@@ -169,11 +169,11 @@
         
     </footer>
 
-        {% block postloadjs %}
-        <script type="text/javascript">
-            $('.toast').toast('show');
-        </script>
-        {% endblock %}
+    {% block postloadjs %}
+    <script>
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
 
     </body>
 </html>

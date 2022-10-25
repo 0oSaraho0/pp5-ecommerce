@@ -18,9 +18,9 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
-            <span class="text-center">
-                <h1>Blog</h1> 
+        <div class="col text-center">
+            <h1>Blog</h1>
+            <span class="text-center"> 
                 {% if request.user.is_superuser %}
                 <p>
                     <a class="blog-post-link" href="{% url 'create_blog_post' %}">Create a Blog Post</a>
@@ -42,8 +42,7 @@
                                 {% if "placeholder" in blogpost.image.url %}
                                 <!-- Placeholder image-->
                                 <img class="card-img-top blog-page-pic" 
-                                src="" 
-                                alt="">
+                                src="media/blog-pic.png" alt="{{ blogpost.charity.name }}">
                                 {% else %}
                                 <!-- User image -->
                                 <a href="{% url 'blog_post_detail' blogpost.id %}" class="blog-link">
