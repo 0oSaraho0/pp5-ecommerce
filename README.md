@@ -250,24 +250,53 @@ The profile page has the users address details available to edit if necessary.  
 ### Blog
 User stories:
 - As a site user I want to be able to see where the money from the site is being sent so I can feel good about my purchases
-- As a site owner I want to easily be able to add blog entries onto the Site
-- As a site owner I want to be able to edit my blog posts so that I can make corrections easily
-- As a site owner I want to be able to delete blog posts as necessary.
-- As a site owner I want to be the only one who can create edit and delete blog posts
 
 The blog page shows a list of blog posts that have been entered by the site owner. 
 ![blog](media/blog.jpg)
 
-The create a blog post button is only visible to the superuser
+The create edit and delete a blog post buttons is only visible to the superuser
 ![blog](media/blog-not-superuser.png)
+
+- As a site owner I want to be the only one who can create edit and delete blog posts
+
+The blog forms are all simple to use with clear instructions.
+![blog](media/add-blog-post.png)
+- As a site owner I want to easily be able to add blog entries onto the Site
+![blog](media/edit-blog.png)
+- As a site owner I want to be able to edit my blog posts so that I can make corrections easily
+![blog](media/delete-blog.png)
+- As a site owner I want to be able to delete blog posts as necessary.
+
+### Reviews
+- As a user I would like to be able to read reviews about so I can decide if I want to use it
+
+The reviews page lists the customer reviews in order of most recent first.  They are clear and easy to read.
+![reviews](media/reviews.png)
+
+- As a site user who is logged in I would like to be able to leave my own review so that I can tell others about my experience
+
+Everyone can see the write a review button so that users are encouraged to write a review.  However if you not registered it directs you to the registration page.
+
+### Donations
+
+The donations form is simple to complete.  The user doesn't need to be logged in to arrange a collection.  They can jsut complete the form with the address details of collection, a date and what and how many bags are to be collected.
+
+The user is then directed to a confirmatin screen and an email is sent confirming the details.
+
+### Subscribe
+
+Users can subscribe to the sites mailing list.  Mailchimp has been used to set up the mailing list and all the user needs to do is fill out their name and email address.
+
+
 
 ## Features left to impliment
 
 There were a few items that would have been really nice to include, that I included in my user stories but unfortunately I ran out of time.
 - I wanted to add the donation details to the profile page as well as the orders so that user could have a record of this as well. 
-- I wanted to add a star rating system to the reviews page. This would have been a nice extra visual to see what people though of the site.
+- I wanted to add a star rating system to the reviews page. This would have been a nice extra visual to see what people though of the site. 
+  - As a user it would be nice to give my review a rating out of five for ease of reference
 - I wanted to add replies to the reviews page so that the site owner could reply to customers and solve problems they have, this would add extra user experience value and would deffinately be in the next update if there was one.
-
+  - As a site owner it would be nice to be able to reply to reviews to show a personal touch
 
 # Wireframes
 
@@ -309,7 +338,7 @@ The data was designed to give the user CRUD functionality once signed in.  Ideas
 
 # Security
 
-Views were secured by using the django based view mixin, UserPassesTestMixin.  A test function was created to use the mixin and checks that the user is authorised to access the page.  an if statement is also used in idea_detail.html to hide the delete and edit buttons if the user is not authorised.  
+If statemets were used to ensure that buttons that were only for the superuser were hidden from everyone else. 
 
 Environment variables were stored in an env.py file for security purposes to ensure no secret keys, api keys or sensitive information were added to the repository.  These variables were added to heroku config vars within the project
 
@@ -317,25 +346,17 @@ Environment variables were stored in an env.py file for security purposes to ens
 
 ## Colour Scheme
 
-I opted for a simple colour scheme.  It needed to be gender neutral and although the site is about children it is aimed at adults so I wanted a more adult feel to it.  I also wanted it to be neutral so that the user ides stood out.  with this in mind, I went for a background colour of #041121
-
-![Background colour](/static/images/background-colour.png)
-
-and a text colour of rgb(237, 233, 249.
-
-![Text colour](/static/images/text-colour-1.png)
+I opted for a simple black white and gray colour scheme.  I wanted the site to look clean and simple in its design
 
 ## Typogropny
 
-I used Yusei Magic for the body of the site and Ranchers for the Kidsbored heading.
+I used Alfa slab One for the logo font and Rubi for the body of the site
 
 I downloaded these from google fonts and imported them into the style sheet
 
 ## Imagery  
 
-The hero image used is a picture of my own.  I sought permission from the parents of the children.
-
-The placeholder image was taken from pexels and is royalty free.  I chose a generic picture of children running through a field.  It is bright and colourful.
+The front page image was taken from vogue magazine on a guide to the best charity shops
 
 # Technologies
 
@@ -359,19 +380,28 @@ The placeholder image was taken from pexels and is royalty free.  I chose a gene
   - I used this to enter my table of contents.
 
 ## External Python Modules
-- cloudinary==1.29.0 - cloudinary was used to store imagery for the site and to upload user images
-- dj-database-url==0.5.0 - used to parse database url for production environment
-- dj3-cloudinary-storage==0.0.6 - Storage system for cloudinary
-- Django==3.2.13 - Framework used to build the application
-- django-allauth==0.51.0 - Used for the sites sign in and sign out authentication system 
-- django-cloudinary-storage==0.3.0 - Storage for cloudinary
-- django-crispy-forms==1.14.0 - used to style forms 
-- django-summernote==0.8.20.0 - used in admin panel
-- gunicorn==20.1.0 - Installed as a dependency with another package
-- oauthlib==3.2.0 - Installed as a dependency with another package
-- Pillow==9.2.0 - Installed to upload images but ended up using cloudinary istead,  left incase needed for future development
-- psycopg2==2.9.3 Needed for heroku deployment 
-- whitenoise==6.2.0 - Installed to deploy static files to heroku.
+- asgiref==3.5.2
+- backports.zoneinfo==0.2.1
+- boto3==1.24.89
+- botocore==1.27.89
+- dj-database-url==0.5.0
+- Django==3.2
+- django-allauth==0.41.0
+- django-countries==7.2.1
+- django-crispy-forms==1.14.0
+- django-storages==1.13.1
+- django-summernote==0.8.20.0
+- gunicorn==20.1.0
+- jmespath==1.0.1
+- oauthlib==3.2.1
+- Pillow==9.2.0
+- psycopg2-binary==2.9.4
+- python3-openid==3.2.0
+- pytz==2022.2.1
+- requests-oauthlib==1.3.1
+- s3transfer==0.6.0
+- sqlparse==0.4.2
+- stripe==4.2.0
 
 # Testing
 
@@ -381,137 +411,100 @@ The placeholder image was taken from pexels and is royalty free.  I chose a gene
 
 Testing was performed on on all navigation links throughout the site.  I achieved this by clicking on each link to ensure it went to the correct place.
 
-kidsbored Logo => index.html
-Home page => index.html
-Browse Ideas => ideas.html
-Idea Title => ideas_detail.html
-Delete Button => idea_delete.html
-Edit Button => idea_edit_form.html
-Edit Button Submit Button => ideas.html
-Activity Website => chosen website(opens in new tab)
-Register => signup.html
-Add Idea = > create_idea.html
-Add Idea Submit Button => ideas.html
-Log In => login.html
-Log Out => logout.html
+Laneys Loft Logo => index.html
+All Products
+- By Price => Arranges products by price
+- By Category => Arranges products by A-Z Category
+- All Products => Shows all products
+Womens, Skits, Jeans, Dresses, Tshirts and All clothing
+- All these filter womens cloths by the desired clothing type
+Mens clothes all filter by the correct clothing types
+Kids clothes and toys all filter by the correct types
 
-All navigation links worked as expected
+My Account
+My Profile => Profile page
+Log out (if logged in) => to log out page
+(if not logged in) Sign in => to sign in page
+(if not logged in) Register => to Registration page
 
-### Footer
+Products page
+Picture => Product detail page
+Sort Box - All items in the sort box were tested and sort items accordingly
 
-All the font awesome icons in the footer opened to their respective websites, in a new window, as expected.
+Product Details page
+Keep Shopping => goes back to the products page
+Add to bag => correctly adds the item to the users back, this shows a success toast with the bag contents and the bag total cost 
+shows up in under shopping bag icon.  The user can either click the cross on the toast to get rit of it or they can go to the checkout by clicking the go to secure checkout button.  This works correctly
 
-### Sign Up Page
+Bag Icon
+The shopping bag icon takes the user to the shopping bag.
 
-Testing was taken out to ensure a user could sign up to the website.
-Steps:
-- Navigate to [Kidsbored](https://kids-bored.herokuapp.com/)
-- Navigate to the Register page
-- Enter User Name and Password, email is optional
-- Click Sign Up
+Shopping Bag
+The red remove button correctly deletes the item from the shopping bag and the correct toast appears confirm this has been successful.
 
-Expected outcome: User is redirected to the home page.  The Navbar changed to show the create Idea potion and log out option.
-Actual outcome: User is redirected to the home page.  The Navbar changed to show the create Idea potion and log out option.
+The Keep Shopping button correctly takes the user back to the products page
 
-### Log out Page
+The Secure checkout button correctly takes the user to the checkout form.
 
-Testing was taken out to ensure a user could log out of the website.
-Steps:
-- Navigate to Log Out page
-- Click Confirm button
+Checkout
 
-Expected outcome: User is taken back to the homepage with the Create Idea option hidden and the Register option showing.
-Actual outcome: User is taken back to the homepage with the Create Idea option hidden and the Register option showing.
+I check the checkout form for positive and negative tests
 
-### Log in
+I left each box blank and the form flagged an error when these were not filled in correctly
+the email box flagged an error when an incorrect email address was input.  I tried it with just letters and with only and @ and with only a .com.  These all showed errors as expected.
 
-Testing was taken out to ensure a user could log in to the website.
-Steps:
-- Navigate to [Kidsbored](https://kids-bored.herokuapp.com/)
-- Navigate to Log In page
-- Enter User Name and Password
-- Click Sign in
+I tested The save deliver button to profile button both ticked an unticked and it correcly saved the forms information when the box was ticked.  I then logged in again to check that the informatin was in the form the next time and it was.
 
-Expected outcome: User is redirected to the home page.  The Navbar changes to show the create idea option and log out options. A message appears to say they have successfully logged in.
-Actual outcome: User is redirected to the home page.  The Navbar changed to show the create Idea potion and log out option. A message appears to say they have successfully logged in.
+The adjust bag button correctly takes the user back to the bag.
 
-### Create Idea Page
+Card Details
+I used stripes give card number to use on the site.  It shoed an error when the card number was input incorrectly
 
-Testing was taken out to ensure the user could create a new idea.
+Order Confirmation
 
-Assuming user is already logged in
-Steps:
-- Navigate to Add Idea page
-- Complete form
-  - Activity Name
-  - Upload Image (optional)
-  - Activity Location
-  - Age Range
-  - Price
-  - Activity Website(optional)
-  - Review (optional)
-- Click Submit
+The order confirmatin button takes the user to a thank you page confirming their email address, address and order deatils.
+A success message also correctly appears supplying the order number and confirming the confirmation email is sent to the email address given.
 
-  Expected Outcome if all fields are filled in correctly the user will be redirected to the Brows Ideas page where they can view their idea.  A message appears to say they have successfully created their idea.
+Lest check the latest deals button takes the user back to the products page.
 
-  Expected outcome if the fields are not filled in correctly: A nocies to complete the field appears and the cursor goes to the field that needs to be completed.
+Once the item has been bought, it correctly no longer appears on the procucts page to be bought again.  As this is a second had site there is only one of each item.
 
-  Both of these outcomes happened correctly when tested.
+Footer
+Blog
+The blog button correctly takes the user to the blog list page, each  blog post photo and title correctly take the user to the blog detail page for that post.
 
-### Edit Idea
+On the blog post only the superuser can see the create blog post button.  I tested this both logged out completely and logged in as a regular user.
+The same applies to the delete and edit buttons located in the blog detail.
 
-Tested to ensure the user could edit their idea.
+The charity website link takes you to the correct website and it opens in a new window as it should.
 
-Assuming the user is logged in
-Steps:
-- Navigate to the browse ideas page
-- Click on the Activity Name
-- If the user is the Author of the activity, they will see a delete button and an Edit button under the Activity Name
-- Click the edit button
-- Update the fields you wish to update
-- Click Submit
+The create and edit forms both upload the information and pictures as expected.  The edit form also contained all the previous infomation ready to edit as expected.
 
-Expected outcome:  The user will be redirected back to the browse ideas page which will show the new information, and a message appears to say they have succesfully updated their idea.
+Reviews
+The reviews button correctly takes the user to the reviews page, the revies are correctly ordered with newest first.
+The write a review button takes you to the form to write your review.  once completed the submit button correctly takes you back to the review page where the new review is visable.
 
-The outcome was as expected.
+if you are not logged in the reviews button correctly takes the user to the sign in page
 
-### Delete a post
+Donate your preloved items
+This button correctly takes you to the form to be completed to get your items collected.
+I tested this form and all of the stared fields did need to be entered in order for the form to be sent.  Errors were correctly shown on each line that was incorrect.
 
-Tested to ensure a user could delete their idea.
+I tried putting text in the number of bags box and it did nothing until a nubmber was put in.  This is a slight error as it should really show an error message.  I will fix this but if i have time and write about it in the bug section
 
-Assuming the user is logged in
-Steps:
-- Navigate to the browse ideas page
-- Click on the Activity Name
-- If the user is the Author of the activity, they will see a delete button and an Edit button under the Activity Name
-- Click the delete button
-- User is taken to a Delete confirmation page asking them if their wish to delete that idea showing the activity name.
-- Click Submit
+The email field correctly showed an error if the email address was not completed correctly/
 
-Expected outcome:  The user will be redirected back to the browse ideas page and the idea along with the comments will be deleted.
+The submit button correctly takes the user to a confirmation page confirmaing the details of the collection and that an email has been sent to the user with the details for their records.
 
-The outcome was as expected.
+Subscribe
+The subscribe button correctly takes the user to the mailchimp subscription page.  I tested this with an email that I had already used before and it would not accept it and told me to enter an different email address as it had already been use.
 
-### Comment on a post
+A new email address was successfully added.  
 
-First I checked the comment section when the user is Logged out.
-As expected there is no option to enter a comment at all.  You can view other people’s comments but the box to write your own comment is hidden.
+It also correctly flagged an error when an incompolete email address was added.
 
-If the user is logged in:
-Steps
-- Navigate to Browse Ideas
-- Click on the activity name
-- scroll down to the comments section.
-- Write your comment in the comments box
-- Click submit
+All of the social media icons correctly take to you their respective social media pages which open in a new page as expected.
 
-Expected outcome: The comment will appear in the comment section to the left of the comment box.
-
-The outcome was as expected.
-
-### User test
-
-I asked my brother to use the site, upload an idea and give me feedback.  He found the site easy to use but found a problem, when he uploaded his picture it cut his daughters head off.  She was most upset about this.  This highlighted a bug which I have written about in the bug section.
 
 ## Accessibility
 
@@ -563,6 +556,11 @@ File "/workspace/.pip-modules/lib/python3.8/site-packages/django/db/backends/dum
 django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
 
 I looked at the error and went to the database section in settings.  I found a typo in Databases and updated this to fix the problem
+
+
+Error on donations form.  number of bags field does not show a proper error when the incorrect informatin is put in.  This is bad ux as the user could become confused as to what to put in the box.  I have unfortunately not had time to fix this error and as it is only a small bug I felt I could leave it until the next update.
+
+
 
 # Deployment
 
