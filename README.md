@@ -16,11 +16,11 @@ You can reach the live site [here]()
 
 ## Site Goals
 
-The site is aimed at anyone that wants to donate their unwanted items to charity, and anyone who wants to buy preloved items  Without signing in the user can browse the online store and donate their items.  they can also look at the site blog to see where they money is being spent.  They can log in to see a log of the items they have bought and leave a review of the site.  They can also save their details for future purchases.
+The site is aimed at anyone that wants to donate their unwanted items to charity, and anyone who wants to buy preloved items  Without signing in the user can browse the online store and donate their items.  They can also look at the site blog to see where they money is being spent.  They can log in to see a log of the items they have bought and leave a review of the site.  They can also save their details for future purchases.
 
 ## Agile Planning
 
-This project was developed using agile methodologies, delivering small features over 5 sprints spaced out over 6 weeks.  Each issue was labelled must have, should have and could have.  The must have features were completed first, then the should have's, then the could have's.  It was done this way to ensure a complete website is made with the nice to have features added if there is capacity.
+This project was developed using agile methodologies, delivering small features over 6 sprints spaced out over 6 weeks.  Each issue was labelled must have, should have and could have.  The must have features were completed first, then the should have's, then the could have's.  It was done this way to ensure a complete website is made with the nice to have features added if there is capacity.
 
 My kanban board was made using github projects which can be viewed [here]().  Each view can be clicked in to obtain further information.
 
@@ -36,7 +36,7 @@ Epic 1 user stories
 
 - As a developer, I need to set up the project so that it is ready for implementing core features
 - As a developer, I want to create a base HTML page so that all pages can use the same format.
-- As a user, I want to be able to navigate easily around the site easily from any device
+- As a user, I want to be able to navigate around the site easily from any device
 
 
 Epic 2 - Products and shopping bag
@@ -55,7 +55,7 @@ Epic 3 - payment and purchase confirmation emails.
 
 Epic 3 User Stories
 
-- As a shopper I want to be able to easily enter my payment details so that I can purchase my chosen items easily.
+- As a shopper I want to be able to easily enter my payment details so that I can purchase my chosen items.
 - As a shopper I want to see confirmation that my payment has gone through successfully and that my purchase is being sent to the correct address so that I know it has been done correctly
 - As a shopper I want laneys loft to send me an email so that I can keep confirmation of purchase for my own records.
 
@@ -121,7 +121,7 @@ Epic 10 Tasks
 
 Navbar
 
-user story - As a user I want to be able to navigate easily around the site easily from any devise
+user story - As a user I want to be able to navigate easily around the site from any devise
 
 Navigation Menu
 
@@ -279,6 +279,8 @@ Everyone can see the write a review button so that users are encouraged to write
 
 ### Donations
 
+- As a user I want to be able to arrange for my donated items to be picked up easily.
+
 The donations form is simple to complete.  The user doesn't need to be logged in to arrange a collection.  They can jsut complete the form with the address details of collection, a date and what and how many bags are to be collected.
 
 The user is then directed to a confirmatin screen and an email is sent confirming the details.
@@ -355,11 +357,14 @@ Reviews
 
 # Database
 
-The data was designed to give the user CRUD functionality once signed in.  Ideas are connected to the author by foreign key which allows users to edit and delete ideas connected to their account. 
+The database was designed for the items to be tracked all the way through to sale and then recorded onto the user profile once sold.  
+I originaly made lots of models for the different items in the itmess app. They were all joined to the main items database by primary key.  The aim of this was to make it easier to put search options on the producs pages for different colours, sizes, age ranges of products etc.  Unfortuanately I did not have time to implement all the search options I wanted to but I have left the different models in, in case of future developement.
+
+The items are connected to the user and shoppig bag by primary key and are then stored on the users profile as past orders.
 
 # Security
 
-If statemets were used to ensure that buttons that were only for the superuser were hidden from everyone else. 
+If statemets were used to ensure that buttons that were only for the superuser were hidden from everyone else. The userpasses test mixin was used to make sure the superuser is signed in to complete the blog.
 
 Environment variables were stored in an env.py file for security purposes to ensure no secret keys, api keys or sensitive information were added to the repository.  These variables were added to heroku config vars within the project
 
@@ -448,31 +453,33 @@ Log out (if logged in) => to log out page
 (if not logged in) Sign in => to sign in page
 (if not logged in) Register => to Registration page
 
-Products page
+### Products page
 Picture => Product detail page
 Sort Box - All items in the sort box were tested and sort items accordingly
 
-Product Details page
+### Product Details page
 Keep Shopping => goes back to the products page
-Add to bag => correctly adds the item to the users back, this shows a success toast with the bag contents and the bag total cost 
+Add to bag => correctly adds the item to the users bag this shows a success toast with the bag contents and the bag total cost 
 shows up in under shopping bag icon.  The user can either click the cross on the toast to get rit of it or they can go to the checkout by clicking the go to secure checkout button.  This works correctly
 
-Bag Icon
+I tested adding the same item twice to the shoppig bag and an error message correctly appears advising the user they cant do that.
+
+### Bag Icon
 The shopping bag icon takes the user to the shopping bag.
 
-Shopping Bag
+### Shopping Bag
 The red remove button correctly deletes the item from the shopping bag and the correct toast appears confirm this has been successful.
 
 The Keep Shopping button correctly takes the user back to the products page
 
 The Secure checkout button correctly takes the user to the checkout form.
 
-Checkout
+### Checkout
 
-I check the checkout form for positive and negative tests
+I checked the checkout form for positive and negative tests
 
-I left each box blank and the form flagged an error when these were not filled in correctly
-the email box flagged an error when an incorrect email address was input.  I tried it with just letters and with only and @ and with only a .com.  These all showed errors as expected.
+I left each box blank and the form flagged an error when these were not filled in correctly.
+The email box flagged an error when an incorrect email address was input.  I tried it with just letters and with only an @, and with only a .com.  These all showed errors as expected.
 
 I tested The save deliver button to profile button both ticked an unticked and it correcly saved the forms information when the box was ticked.  I then logged in again to check that the informatin was in the form the next time and it was.
 
@@ -481,17 +488,17 @@ The adjust bag button correctly takes the user back to the bag.
 Card Details
 I used stripes give card number to use on the site.  It shoed an error when the card number was input incorrectly
 
-Order Confirmation
+### Order Confirmation
 
-The order confirmatin button takes the user to a thank you page confirming their email address, address and order deatils.
+The order confirmation button takes the user to a thank you page confirming their email address, address and order deatils.
 A success message also correctly appears supplying the order number and confirming the confirmation email is sent to the email address given.
 
-Lest check the latest deals button takes the user back to the products page.
+I checked the latest deals button takes the user back to the products page.
 
 Once the item has been bought, it correctly no longer appears on the procucts page to be bought again.  As this is a second had site there is only one of each item.
 
-Footer
-Blog
+###Footer
+###Blog
 The blog button correctly takes the user to the blog list page, each  blog post photo and title correctly take the user to the blog detail page for that post.
 
 On the blog post only the superuser can see the create blog post button.  I tested this both logged out completely and logged in as a regular user.
@@ -500,6 +507,9 @@ The same applies to the delete and edit buttons located in the blog detail.
 The charity website link takes you to the correct website and it opens in a new window as it should.
 
 The create and edit forms both upload the information and pictures as expected.  The edit form also contained all the previous infomation ready to edit as expected.
+
+Unfortunately an error occurd in the blog form. If a picture is not correctly uploaded it causes an error on the blog list page.  
+I have written about this in the bug section.
 
 Reviews
 The reviews button correctly takes the user to the reviews page, the revies are correctly ordered with newest first.
@@ -584,7 +594,7 @@ I looked at the error and went to the database section in settings.  I found a t
 
 Error on donations form.  number of bags field does not show a proper error when the incorrect informatin is put in.  This is bad ux as the user could become confused as to what to put in the box.  I have unfortunately not had time to fix this error and as it is only a small bug I felt I could leave it until the next update.
 
-
+Error on donation form. If a picture is not input correctly it causes an error on the blog list page. The only way to get back in is to go into the admin panel and delete the blog post.
 
 # Deployment
 
