@@ -12,7 +12,7 @@ body {
     font-family: 'Rubik';
     background-color: lightgrey;
 }
-
+/* spacing container */
 .header-container {
     padding-top: 145px;
 }
@@ -47,6 +47,7 @@ body {
     width: 1.5rem;
 }
 
+/* logo font */
 .logo-font {
     text-transform: uppercase;
     font-family: 'Alfa Slab One', sans-serif;
@@ -60,7 +61,6 @@ body {
 .main-logo-link {
     width: fit-content;
 }
-
 
 /* Home Page */
 
@@ -101,7 +101,6 @@ body {
     text-decoration: none;
     
 }
-
 
 /* Reviews page */
 
@@ -195,16 +194,6 @@ body {
     background:#000 !important;
 }
 
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-}
-
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -223,7 +212,18 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-/* message container */ 
+/* overlay  */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+/* toasts */ 
 
 .message-container {
     position: fixed;
@@ -292,14 +292,13 @@ toast-capper {
     overflow-y: auto;
 }
 
-/* Mainchimp CSS */
+/* Mailchimp CSS */
 
 #mc_embed_signup {
     background:#fff; 
     clear:left; 
     font:14px Helvetica,Arial,sans-serif;  
     width:600px;
-
 }
 
 .my-mailchimp {
@@ -380,8 +379,6 @@ toast-capper {
     }
 }
 
-
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -410,7 +407,6 @@ toast-capper {
         padding-top: 147px;
     }
 }
-
 
 /* adjust mobile header on small mobile */
 

@@ -33,14 +33,15 @@
         <title>Laneys Loft | Online Preloved Charity Store {% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-        <header class="container-fluid fixed-top">
-            
+        <!-- logo -->
+        <header class="container-fluid fixed-top">         
             <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-white my-0">Laneys Loft</h2>
                     </a>
                 </div>
+                <!-- search box -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'items' %}">
                         <div class="input-group w-100">
@@ -55,6 +56,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- account details -->
                 <div class="col-12 col-lg-4 search-box my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0 ">
                         <li class="list-inline-item dropdown">
@@ -65,18 +67,13 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="" class="dropdown-item">Product Management</a>
-                                    {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
                             </div>
                         </li>
+                        <!-- shopping bag -->
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
@@ -102,10 +99,10 @@
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
-            </div>
-            
+            </div>    
         </header>
 
+        <!-- toasts -->
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
