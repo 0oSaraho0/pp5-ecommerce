@@ -1,1 +1,49 @@
-<h1>Thank you for your donation</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container ">
+    <div class="row text-centre">
+        <div class="col-12 text-centre">
+            <h1>Thank you for your donation</h1>
+        </div>
+    </div>
+    <div class="row text-centre">
+        <div class="col-12 text-centre">
+            <p>
+                A memeber of our team will be in touch on the lead up to your 
+                collection date to confirm an appropriate collection time
+            </p>
+            <p>
+                Please ensure all items are baged up in strong bags.  Bin liners will suffice,
+                we Just dont want them to fall appart in transit
+            </p>
+            <p>Your donation will help some very worthy causes.</p>
+            <p>You can check out where the money raised is being spent at our blog by clicking
+                <a href="{% url 'blog_posts' %}">here</a>
+            </p>
+            <p>If you have any further questions please do not hesistate to conact us
+                at laneysloft@googlemail.com
+            </p>
+            <p>Thank you again!</p>
+            <p>Yours sincerely</p>
+            <p>The Laneys Loft Team</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
