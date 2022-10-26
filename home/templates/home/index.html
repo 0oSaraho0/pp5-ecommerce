@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- container for spaceing -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -12,9 +13,10 @@
 {% block content %}
     <div class="container h-100" >
         <div class="row h-100">
+            <!-- tagline -->
             <div class="buy-and-donate col-12 col-md-6 col-lg-6  my-auto">
                 <h1>Buy And Donate Your Preloved Clothes And Kids Toys</h1>
-            
+                <!-- shop and donate buttons -->
                 <div class="my-5">
                     <h4>
                         <a href="{% url 'items' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
@@ -30,7 +32,7 @@
             <div class="col"></div>
         </div>
     </div>
-
+    <!-- about us section -->
     <div class="container h-56 about-us g-0">
         <div class="row h-56 about-us-width">
             <div class="col-12 g-0">

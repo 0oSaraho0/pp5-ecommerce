@@ -8,6 +8,6 @@ def index(request):
 
 
 def Subscribe(request):
-    """ A view to return the index page """
+    """ A view to return the mailchimp page """
 
     return render(request, 'home/subscribe.html')
