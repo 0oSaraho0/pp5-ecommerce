@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+<!-- container to move the rest of the body down from under the nav bar -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -11,6 +11,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- overlay to chage the background colour -->
     <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
@@ -20,22 +21,25 @@
                 <hr>
             </div>
         </div>
-
+        <!-- for small screens -->
         <div class="row">
             <div class="col">
                 {% if bag_items %}
                 <div class="d-block d-md-none">
                     <div class="row">
                         <div class="col">
+                            <!-- bag toal cost -->
                             {% include "bag/bag_total.html" %}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
+                            <!-- checkout buttons -->
                             {% include "bag/checkout_buttons.html" %}
                             <p class="mb-5">A summary of your contents is below</p>
                         </div>
                     </div>
+                    <!-- looping through the items in the bag -->
                     {% for item in bag_items %}
                     <div class="row">
                         <div class="col-12 col-sm-6 mb-2">
@@ -49,12 +53,14 @@
                             <p class="my-0">PriceL<strong>£{{ item.item.price }}</strong></p>
                         </div>
                         <div class="col-12 col-sm-6">
+                            <!-- delete button -->
                             {% include "bag/delete_item.html" %}
                         </div>
                     </div>
                     <div class="row"><div class="col"><hr></div></div>
                     {% endfor %}
                 </div>
+                <!-- for larger screens -->
                     <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
@@ -67,7 +73,7 @@
                                     <th scope="col">Remove</th>
                                 </tr>
                             </thead>
-
+                            <!-- all items in the bag -->
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -100,6 +106,7 @@
                         </table>
                     </div>
                 {% else %}
+                <!-- if nothing is is in the bag -->
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'items' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">

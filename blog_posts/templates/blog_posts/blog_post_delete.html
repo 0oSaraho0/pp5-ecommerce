@@ -20,10 +20,10 @@
 
 <div class="row col-md-8 offset-md-2">
     <div class="col-md-8 offset-md-2 p-3">
-        <!-- Delete idea headig -->
+        <!-- Delete blog post heading -->
         <h1 class="text-center">Delete Blog Post</h1>
         <div class="d-flex justify-content-center pt-3">
-            <!-- Delete idea confirmation form-->
+            <!-- Delete blog post confirmation form-->
             <form method="post" class="text-center p-5">
                 {% csrf_token %}
                 <p>Are you sure you want to delete "{{ blogpost.event_name }}"?</p>

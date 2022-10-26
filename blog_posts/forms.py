@@ -4,7 +4,7 @@ from django import forms
 
 
 class BlogPostForm(forms.ModelForm):
-    """ A form to create an idea """
+    """ A form to create a blog post """
     class Meta:
         model = BlogPost
         fields = (

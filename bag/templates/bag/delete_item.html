@@ -1,3 +1,4 @@
+<!-- remove item button -->
 <td class="py-3">
     <form class="form" action="{% url 'remove_from_bag' item.bag_item_id %}" method="POST">
         {% csrf_token %}

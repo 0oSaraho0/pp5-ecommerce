@@ -5,7 +5,7 @@ from items.models import Item
 
 
 def bag_contents(request):
-
+    """ calculates quantity and total price of bag items """
     bag_items = []
     total = 0
     item_count = 0
@@ -20,7 +20,7 @@ def bag_contents(request):
             'quantity': quantity,
             'item': item,
         })
-
+    # calculates free devlivery
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView)
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib import messages
 from .models import BlogPost
 from .forms import BlogPostForm
@@ -26,7 +27,7 @@ class BlogPostDetailView(DetailView):
 
 
 class BlogPostCreateView(CreateView):
-    """ A view to create an idea """
+    """ A view to create a blog post """
 
     form_class = BlogPostForm
     template_name = 'blog_posts/create_blog_post.html'
@@ -34,14 +35,14 @@ class BlogPostCreateView(CreateView):
     model = BlogPost
 
     def form_valid(self, form):
-        """ If form is valid return to browse ideas """
+        """ If form is valid return to browse blog posts """
 
         messages.success(self.request, 'Blog post created successfully')
         return super(BlogPostCreateView, self).form_valid(form)
 
 
 class EditBlogPostView(UpdateView):
-    """ A view to edit an idea """
+    """ A view to edit a blog post """
 
     Model = BlogPost
     form_class = BlogPostForm
@@ -53,13 +54,13 @@ class EditBlogPostView(UpdateView):
         return get_object_or_404(BlogPost, id=id_)
 
     def form_valid(self, form):
-        """ If form is valid return to browse ideas """
+        """ If form is valid return to browse blog posts """
         messages.success(self.request, 'Idea created successfully')
         return super().form_valid(form)
 
 
 class BlogPostDelete(DeleteView):
-    """ A view to delete an idea """
+    """ A view to delete a blog post """
     model = BlogPost
     success_url = "/blog_posts/blog_posts/"
     template_name = "blog_posts/blog_post_delete.html"
