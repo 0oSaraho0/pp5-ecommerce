@@ -1,10 +1,10 @@
 # Laneys Loft
 
-Laneys loft is a charity ecommerse site.  It takes donations of clothes books and kids toys and the items online.  It then donates proceeds to charities and charitable events. 
+Laneys loft is a charity ecommerse site.  It takes donations of clothes books and kids toys and sells the items online.  It then donates proceeds to charities and charitable events. 
 
 You can reach the live site [here]()
 
-![Responsive Screens](/static/images/responsive-screens.png)
+![Responsive Screens](/media/responsive-screens.png)
 
 # Table of contents   
 
@@ -309,35 +309,49 @@ There were a few items that would have been really nice to include, that I inclu
 
 Home Page
 
-![Home page wireframe](/static/images/home-page-wireframe.png)
+![Home page wireframe](/media/wireframe-home.png)
 
 Sign Up
 
-![Sign up wireframe](/static/images/sign-up-wireframe.png)
+![Sign up wireframe](/media/wireframe-sign-in.png)
 
 Log In
 
-![Log in wireframe](/static/images/log-in-wireframe.png)
+![Log in wireframe](/media/wireframe-login.png)
 
 Log out
 
-![log out wireframe](/static/images/log-out-wireframe.png)
+![log out wireframe](/media/wireframe-log-out.png)
 
-Browse Ideas
+Products
 
-![Browse Ideas wireframe](/static/images/browse-ideas-wireframe.png)
+![Browse Ideas wireframe](/media/wireframe-products-page.png)
 
-Idea Detail
+Product Detail
 
-![Idea Detail wireframe](/static/images/idea-detail-wireframe.png)
+![Idea Detail wireframe](/media/wireframe-product-detail.png)
 
-Create/Edit Idea Form
+bag
 
-![Create/Edit Idea wireframe](/static/images/create-idea-wireframe.png)
+![Create/Edit Idea wireframe](/media/wireframe-bag.png)
 
-Delete Idea Conirmation
+Checkout
 
-![Delete Idea wireframe](/static/images/delete-idea-wireframe.png)
+![Delete Idea wireframe](/media/wireframe-checkout.png)
+
+Order Confirmation
+
+![Delete Idea wireframe](/media/wireframe-order-confirmation.png)
+
+Blog Post
+![Delete Idea wireframe](/media/wireframe-blog-posts.png)
+
+Donation Form
+![Delete Idea wireframe](/media/wireframe-order-confirmation.png)
+
+Reviews
+![Delete Idea wireframe](/media/wireframe-reviews.png)
+
 
 # Database
 
