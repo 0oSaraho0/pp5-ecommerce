@@ -5,6 +5,7 @@ from .models import (
 
 
 class ItemAdmin(admin.ModelAdmin):
+    """ An admin class to display the item fields"""
     list_display = (
         'sku',
         'name',
@@ -23,6 +24,7 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """ A class to choose the fields to display in admin"""
     list_display = (
         'friendly_name',
         'name'

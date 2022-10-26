@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- container for spacing -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -16,6 +16,7 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <h1 class="logo-font">Product Detail</h1>
                 <div class="image-container my-5">
+                    <!-- image -->
                     {% if item.image %}
                         <a href="{{ item.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -27,6 +28,7 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ item.name }}</p>

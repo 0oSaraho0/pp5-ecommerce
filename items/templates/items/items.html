@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- container for spacing -->
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -24,6 +24,7 @@
             </div>
         </div>
         <div class="row">
+            <!-- search box -->
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
@@ -51,6 +52,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- product list -->
                     {% for item in items %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
@@ -82,6 +84,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- arranges the products by different amounts of different screens -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>

@@ -1,6 +1,7 @@
+/* profile form */
 .order-history  {
-     max-height: 416px; /* height of profile form and submit button */
-     overflow-y: auto;
+    max-height: 416px; /* height of profile form and submit button */
+    overflow-y: auto;
 }
 
 #profile-update-form .form-control {
