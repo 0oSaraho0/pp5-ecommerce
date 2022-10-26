@@ -17,11 +17,12 @@ class MakeDonation(CreateView):
         messages.success(
             self.request, 'Collection request successfully recieved.'
             'Thank you for your donation')
+
         return super(MakeDonation, self).form_valid(form)
 
 
 class DonationConfirmation(TemplateView):
-    """
-    View to render donataion collection confirmation
-    """
+    """ A view to confrim the collection details have been recieved"""
+    model = Donation
     template_name = 'donations/donation_confirmation.html'
+    queryset = Donation.objects.all()
