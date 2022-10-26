@@ -22,7 +22,7 @@ class MakeDonation(CreateView):
 
 
 class DonationConfirmation(TemplateView):
-    """ A view to confrim the collection details have been recieved"""
+    """ A view to confm the collection details have been recieved"""
     model = Donation
     template_name = 'donations/donation_confirmation.html'
     queryset = Donation.objects.all()
