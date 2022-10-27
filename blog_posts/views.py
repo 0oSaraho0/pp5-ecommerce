@@ -26,13 +26,17 @@ class BlogPostDetailView(DetailView):
         return get_object_or_404(BlogPost, id=id_)
 
 
-class BlogPostCreateView(CreateView):
+class BlogPostCreateView(UserPassesTestMixin, CreateView):
     """ A view to create a blog post """
 
     form_class = BlogPostForm
     template_name = 'blog_posts/create_blog_post.html'
     success_url = "/blog_posts/blog_posts/"
     model = BlogPost
+
+    def test_func(self):
+        """tests the user has the correct email for superuser"""
+        return self.request.user.email.startswith('email@email')
 
     def form_valid(self, form):
         """ If form is valid return to browse blog posts """
@@ -41,7 +45,7 @@ class BlogPostCreateView(CreateView):
         return super(BlogPostCreateView, self).form_valid(form)
 
 
-class EditBlogPostView(UpdateView):
+class EditBlogPostView(UserPassesTestMixin, UpdateView):
     """ A view to edit a blog post """
 
     Model = BlogPost
@@ -53,17 +57,25 @@ class EditBlogPostView(UpdateView):
         id_ = self.kwargs.get("id")
         return get_object_or_404(BlogPost, id=id_)
 
+    def test_func(self):
+        """tests the user has the correct email for superuser"""
+        return self.request.user.email.startswith('email@email')
+
     def form_valid(self, form):
         """ If form is valid return to browse blog posts """
         messages.success(self.request, 'Idea created successfully')
         return super().form_valid(form)
 
 
-class BlogPostDelete(DeleteView):
+class BlogPostDelete(UserPassesTestMixin, DeleteView):
     """ A view to delete a blog post """
     model = BlogPost
     success_url = "/blog_posts/blog_posts/"
     template_name = "blog_posts/blog_post_delete.html"
+
+    def test_func(self):
+        """tests the user has the correct email for superuser"""
+        return self.request.user.email.startswith('email@email')
 
     def get_object(self):
         id_ = self.kwargs.get("id")
