@@ -2,15 +2,13 @@
 
 Laneys loft is a charity ecommerse site.  It takes donations of clothes books and kids toys and sells the items online.  It then donates proceeds to charities and charitable events. 
 
-You can reach the live site [here]()
+You can reach the live site [here](https://pp5-laneys-loft.herokuapp.com/)
 
 ![Responsive Screens](/media/responsive-screens.png)
 
 # Table of contents   
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
 
 # User-Experience-Design
 
@@ -126,9 +124,8 @@ user story - As a user I want to be able to navigate easily around the site from
 Navigation Menu
 
 from the main top navigation bar the user can log in or sign in.  Once logged in they can access their profile page.
-They can browse all the site products and check their shopping bag.  They can also search the site using the search bar.
 
-The superuser can also view the Product Management section to manage the store items.
+They can browse all the site products and check their shopping bag.  They can also search the site using the search bar.
 
 ![Navbar full size nav bar](/media/full-size-nav-bar.png)
 
@@ -141,7 +138,7 @@ on mobile devices they shopping navigation collapses into a dropdown square and 
 - User Story - As a user I want the front page to be clear and self-explanatory so I know I am in the right place
 
 The front page contains an image of a charity shop.  This gives the initial impression of pre loved goods.
-![Hero Image](/media/homepage_background_cropped.jpg)
+![Hero Image](/media/homepage_background_cropped.webp)
 The front page also containes a tag line advising the user they can shop or donate with a button to take them to either place on the website.  This gives an imediate idea of what the website is for.
 
 ![tag line](/media/front-page-tag-line.png)
@@ -246,7 +243,6 @@ Once the order has been processed a confirmation page tells the user the order d
 
 The profile page has the users address details available to edit if necessary.  It also has a record of all of past shopping orders.
 
-
 ### Blog
 User stories:
 - As a site user I want to be able to see where the money from the site is being sent so I can feel good about my purchases
@@ -281,9 +277,9 @@ Everyone can see the write a review button so that users are encouraged to write
 
 - As a user I want to be able to arrange for my donated items to be picked up easily.
 
-The donations form is simple to complete.  The user doesn't need to be logged in to arrange a collection.  They can jsut complete the form with the address details of collection, a date and what and how many bags are to be collected.
+The donations form is simple to complete.  The user doesn't need to be logged in to arrange a collection.  They can just complete the form with the address details of collection, a date and what and how many bags are to be collected.
 
-The user is then directed to a confirmatin screen and an email is sent confirming the details.
+The user is then directed to a confirmation screen.
 
 ### Subscribe
 
@@ -294,9 +290,21 @@ Users can subscribe to the sites mailing list.  Mailchimp has been used to set u
 I set up my company facebook page and added the link to the facebook icon in the footer.
 
 Here is a screen shot of my page
-![reviews](media/facebook-page.png.png)
+![reviews](media/facebook-page.png)
 
+# Keywords
 
+The keywords I thought of for this site were:
+- Charity
+- Charity Shop
+- Donating
+- Second had clothes
+- Second hand
+- Where can I donate my old clothes
+- Buy preloved clothes
+
+I tied to use as many of these as I could arround the site.  I added the about Laneys Loft section on the front page and added as many as I could fit into it. I also used a few in the blog section.
+If I had more time I would like to create a FAQ page so that I could add plenty of key works there.
 
 ## Features left to impliment
 
@@ -306,7 +314,9 @@ There were a few items that would have been really nice to include, that I inclu
   - As a user it would be nice to give my review a rating out of five for ease of reference
 - I wanted to add replies to the reviews page so that the site owner could reply to customers and solve problems they have, this would add extra user experience value and would deffinately be in the next update if there was one.
   - As a site owner it would be nice to be able to reply to reviews to show a personal touch
-
+- I would like to add a FAQ page as mentioned above to add more keywords into the site
+- I wanted to add more search options on the producs page so the user could search by colour and size etc on the list view.
+- I wanted to add email confirmation to the donations page but ran out of time so have added a confirmation page instead at the moment.
 # Wireframes
 
 Home Page
@@ -358,13 +368,15 @@ Reviews
 # Database
 
 The database was designed for the items to be tracked all the way through to sale and then recorded onto the user profile once sold.  
-I originaly made lots of models for the different items in the itmess app. They were all joined to the main items database by primary key.  The aim of this was to make it easier to put search options on the producs pages for different colours, sizes, age ranges of products etc.  Unfortuanately I did not have time to implement all the search options I wanted to but I have left the different models in, in case of future developement.
+I originaly made lots of models for the different items in the items app. They were all joined to the main items database by primary key.  The aim of this was to make it easier to put search options on the producs pages for different colours, sizes, age ranges of products etc.  Unfortuanately I did not have time to implement all the search options I wanted to but I have left the different models in, in case of future developement.
 
-The items are connected to the user and shoppig bag by primary key and are then stored on the users profile as past orders.
+The items are connected to the user and shopping bag by primary key and are then stored on the users profile as past orders.
 
 # Security
 
 If statemets were used to ensure that buttons that were only for the superuser were hidden from everyone else. The userpasses test mixin was used to make sure the superuser is signed in to complete the blog.
+
+I have also used a UserPassesTest Mixin to ensure that the page can't be reached via the url.
 
 Environment variables were stored in an env.py file for security purposes to ensure no secret keys, api keys or sensitive information were added to the repository.  These variables were added to heroku config vars within the project
 
@@ -401,9 +413,11 @@ The front page image was taken from vogue magazine on a guide to the best charit
 - Balsamiq
   - Balsamiq wireframes were used to plan 
 - javascript
-  - I used a very small amount of javascript to make the toast messages disappear
+  - Used throughout the site
 - [GitHub Wiki TOC generator](http://ecotrust-canada.github.io/markdown-toc/)
   - I used this to enter my table of contents.
+-AWS Amazon
+  - Used to store pictures
 
 ## External Python Modules
 - asgiref==3.5.2
@@ -438,29 +452,44 @@ The front page image was taken from vogue magazine on a guide to the best charit
 Testing was performed on on all navigation links throughout the site.  I achieved this by clicking on each link to ensure it went to the correct place.
 
 Laneys Loft Logo => index.html
+
 All Products
 - By Price => Arranges products by price
 - By Category => Arranges products by A-Z Category
 - All Products => Shows all products
-Womens, Skits, Jeans, Dresses, Tshirts and All clothing
+
+Womens
+
+Skits, Jeans, Dresses, Tshirts and All clothing
 - All these filter womens cloths by the desired clothing type
-Mens clothes all filter by the correct clothing types
+
+Mens 
+
+clothes all filter by the correct clothing types
+
 Kids clothes and toys all filter by the correct types
 
 My Account
+
 My Profile => Profile page
+
 Log out (if logged in) => to log out page
+
 (if not logged in) Sign in => to sign in page
+
 (if not logged in) Register => to Registration page
 
 ### Products page
 Picture => Product detail page
-Sort Box - All items in the sort box were tested and sort items accordingly
+
+Sort Box => All items in the sort box were tested and sort items accordingly
 
 ### Product Details page
 Keep Shopping => goes back to the products page
-Add to bag => correctly adds the item to the users bag this shows a success toast with the bag contents and the bag total cost 
-shows up in under shopping bag icon.  The user can either click the cross on the toast to get rit of it or they can go to the checkout by clicking the go to secure checkout button.  This works correctly
+
+Add to bag => correctly adds the item to the users bag this shows a success toast with the bag contents and the bag total cost shows up in under shopping bag icon.  
+
+The user can either click the cross on the toast to get rit of it or they can go to the checkout by clicking the go to secure checkout button.  This works correctly
 
 I tested adding the same item twice to the shoppig bag and an error message correctly appears advising the user they cant do that.
 
@@ -481,11 +510,11 @@ I checked the checkout form for positive and negative tests
 I left each box blank and the form flagged an error when these were not filled in correctly.
 The email box flagged an error when an incorrect email address was input.  I tried it with just letters and with only an @, and with only a .com.  These all showed errors as expected.
 
-I tested The save deliver button to profile button both ticked an unticked and it correcly saved the forms information when the box was ticked.  I then logged in again to check that the informatin was in the form the next time and it was.
+I tested The save delivery information button to profile button both ticked an unticked and it correcly saved the forms information when the box was ticked.  I then logged in again to check that the information was in the form the next time and it was.
 
 The adjust bag button correctly takes the user back to the bag.
 
-Card Details
+### Card Details
 I used stripes give card number to use on the site.  It shoed an error when the card number was input incorrectly
 
 ### Order Confirmation
@@ -497,35 +526,45 @@ I checked the latest deals button takes the user back to the products page.
 
 Once the item has been bought, it correctly no longer appears on the procucts page to be bought again.  As this is a second had site there is only one of each item.
 
-###Footer
-###Blog
+### Stripe
+I checked the stripe website to make sure that the payment had gone through correctly there and the webhooks had worked correctly and all was working well.
+
+### Profile Page
+I checked that the order had corretly been added to the profile page
+
+I also updated the customer details which then changed on the checkout form the next time I bought something.
+
+### Footer
+### Blog
 The blog button correctly takes the user to the blog list page, each  blog post photo and title correctly take the user to the blog detail page for that post.
 
 On the blog post only the superuser can see the create blog post button.  I tested this both logged out completely and logged in as a regular user.
 The same applies to the delete and edit buttons located in the blog detail.
 
+I also used the url to try and get to the create, edit and delete pages without the buttons and you could get there as the superuser but could not as either not logged in or logged in as a different user.
+
 The charity website link takes you to the correct website and it opens in a new window as it should.
 
 The create and edit forms both upload the information and pictures as expected.  The edit form also contained all the previous infomation ready to edit as expected.
 
-Unfortunately an error occurd in the blog form. If a picture is not correctly uploaded it causes an error on the blog list page.  
-I have written about this in the bug section.
+Unfortunately an error occured in the blog form. If a picture is not correctly uploaded it caused an error on the blog list page.  
+I have written about this in the bug section and it has now been fixed so workes correctly.
 
-Reviews
-The reviews button correctly takes the user to the reviews page, the revies are correctly ordered with newest first.
+### Reviews
+The reviews button correctly takes the user to the reviews page, the reviews are correctly ordered with newest first.
 The write a review button takes you to the form to write your review.  once completed the submit button correctly takes you back to the review page where the new review is visable.
 
-if you are not logged in the reviews button correctly takes the user to the sign in page
+If you are not logged in the reviews button correctly takes the user to the sign in page
 
-Donate your preloved items
+### Donate your preloved items
 This button correctly takes you to the form to be completed to get your items collected.
 I tested this form and all of the stared fields did need to be entered in order for the form to be sent.  Errors were correctly shown on each line that was incorrect.
 
-I tried putting text in the number of bags box and it did nothing until a nubmber was put in.  This is a slight error as it should really show an error message.  I will fix this but if i have time and write about it in the bug section
+I tried putting text in the number of bags box and it did nothing until a number was put in.  This is a slight error as it should really show an error message.  I will fix this bug if I have time and write about it in the bug section
 
-The email field correctly showed an error if the email address was not completed correctly/
+The email field correctly showed an error if the email address was not completed correctly
 
-The submit button correctly takes the user to a confirmation page confirmaing the details of the collection and that an email has been sent to the user with the details for their records.
+The submit button correctly takes the user to a confirmation page confirming the details of the collection and that an email has been sent to the user with the details for their records.
 
 Subscribe
 The subscribe button correctly takes the user to the mailchimp subscription page.  I tested this with an email that I had already used before and it would not accept it and told me to enter an different email address as it had already been use.
@@ -536,19 +575,22 @@ It also correctly flagged an error when an incompolete email address was added.
 
 All of the social media icons correctly take to you their respective social media pages which open in a new page as expected.
 
+The facebook icon correcly went to the Laneys Loft facebook page.
+
 Emails
 
 I was correctly able to set up a new user, receive an email to confirm the email address of the user, click the link to the site and confirm the email address.
 I then logged in with an incorrect name and email for the user and both flagged errors correctly by the system. 
 
+A confirmation email was correctly sent once an order was completed.
 
 ## Accessibility
 
 I used the [Wave Accessibility](https://wave.webaim.org/)tool to check for aid accessibility testing.
 
-All pages came up with zero errors.
+The page showed a couple of errors and they were for labels on the search box in the nav bar.  I added aria labels for this but the errors stayed in the box dispite dissapearing on the page.
 
-They are showing Alerts that show redundant links, on the home page the site logo and the home link on the nav bar are the same.
+On other pages it showed Alerts that show redundant links, on the blog picture and name.  
 
 I have chosen to leave these links as they are because I think they make navigation around the site better.
 
@@ -562,17 +604,16 @@ All issues were fixed and all pages ran through the checker with no errors.
 
 ## PP8 Validator
 
-The pep8 validator was not working at the time of checking this project.  I checked in the terminal using linter and corrected all the items shown until it said no problems detected in workspace.  There were some long lines in the settings tab in Laneys Loft that I left because they were there already.
+The pep8 validator was not working at the time of checking this project.  I checked in the terminal using linter and corrected all the items shown until it said no problems detected in workspace.  There were some long lines in the settings tab in Laneys Loft that I left because they were there already.  I could not find a way of screenshotting a picture of this.
 
-![PEP8 Validator](/static/images/pep8.png)
-
-I didn't use any javascript in my project so there was nothing to test here.
+## Javascript
+I didn't use any Javascript in this project over the js used in boutique ado so I have not tested for that.
 
 ## Lighthouse Report
 
 The lighthouse report initially showed a low score on performance.  I compressed my hero image which fixed the problem.  
 
-![Lighthouse](/static/images/lighthouse.png)
+![Lighthouse](/media/lighthouse-test.png)
 
 # Responsiveness
 
@@ -589,12 +630,22 @@ File "/workspace/.pip-modules/lib/python3.8/site-packages/django/db/backends/dum
     raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
 django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
 
-I looked at the error and went to the database section in settings.  I found a typo in Databases and updated this to fix the problem
+- I looked at the error and went to the database section in settings.  I found a typo in Databases and updated this to fix the problem
 
-
+--------
 Error on donations form.  number of bags field does not show a proper error when the incorrect informatin is put in.  This is bad ux as the user could become confused as to what to put in the box.  I have unfortunately not had time to fix this error and as it is only a small bug I felt I could leave it until the next update.
 
+---------
+
 Error on donation form. If a picture is not input correctly it causes an error on the blog list page. The only way to get back in is to go into the admin panel and delete the blog post.
+- I after some investigation I found that my placeholder image was not working because I had negleted to put the placeholder name in the model. Once I did this the bug was fixed.
+
+-----------
+Error the bag information shows when the blog is being updated.  I have decided to leave this bug.  I have run out of time and realisticaly the site owner probably wont have anything in her bag anyway.
+
+-----
+An error occured when I added the user passes test mixin to the blog create edit and delete views.  This caused an error page when I logged into them.
+I fixed this by looking at the documentation and adding a def text_func function that checked the user had the correct email address.
 
 # Deployment
 
@@ -623,20 +674,15 @@ To deploy my site to Heroku I followed the following steps
 The app should now be deployed
 
 # References
-- I used a couple of other peoples projects to reference kanbans and ideas on what code I could google.
-  - https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak
-  - https://github.com/MattBCoding/pp4-the-pantry
-- I also followed the Code Institute Blog walkthrough to start my project off.
 - I used the django documentation 
-- I used the summernote documentation
 - I used the bootstrap documentation
+- I used slack overflow
+- I used CI slack community
 
 # Acknowledgements
 
 I want to thank:
 - My mentor Daisy McGirr for all her guidance
-- Chris, Kat, Danny and Katy for letting me use a photo of their children
-- My brother for testing my site for me.
 - The wonderful slack community
 - My husband for putting up with my stress
 
