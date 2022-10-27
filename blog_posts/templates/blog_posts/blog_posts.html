@@ -41,8 +41,8 @@
                             <div class="card-body">
                                 {% if "placeholder" in blogpost.image.url %}
                                 <!-- Placeholder image-->
-                                <img class="card-img-top blog-page-pic" 
-                                src="media/blog-pic.png" alt="{{ blogpost.charity.name }}">
+                                <img class="card-img-top blog-post-page-pic" 
+                                src="{{MEDIA_URL}}blog-pic.png" alt="{{ blogpost.charity.name }}">
                                 {% else %}
                                 <!-- User image -->
                                 <a href="{% url 'blog_post_detail' blogpost.id %}" class="blog-link">

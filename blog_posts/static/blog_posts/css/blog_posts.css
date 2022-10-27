@@ -10,6 +10,14 @@
     z-index: -1;
 }
 
+/* blog pics */
+
+.blog-post-page-pic {
+    width: 100%;
+    height: 28vw;
+    object-fit: contain;
+}
+
 /* blog links */
 .blog-name-link{
     color: #555;
