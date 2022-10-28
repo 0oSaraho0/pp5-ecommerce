@@ -468,7 +468,8 @@ I downloaded these from google fonts and imported them into the style sheet
 
 ## Imagery  
 
-The front page image was taken from vogue magazine on a guide to the best charity shops
+The front page image was taken from vogue magazine on a guide to the best charity shops.
+The item pictures are either the ones used in in the Boutique Ado project or they came from Amazon.
 
 # Technologies
 
