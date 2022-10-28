@@ -31,10 +31,16 @@
             <!-- product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ item.name }}</p>
-                    <p class="mb-0">{{ item.brand }}</p>
-                    <p class="mb-0">{{ item.quality }}</p>
+                    <p class="mb-0"><strong>{{ item.name }}</strong></p>
+                    <p class="mb-0"><strong>Brand:</strong> {{ item.brand_or_author }}</p>
+                    <p class="mb-0"><strong>Condition:</strong> {{ item.quality }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
+                    {% if item.size %}
+                    <p class="mb-0"><strong>Size:</strong> {{ item.size }}</p>
+                    {% endif %}
+                    {% if item.kids_age %}
+                    <p class="mb-0"><strong>Age:</strong> {{ item.kids_age }}</p>
+                    {% endif %}
                     {% if item.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-black" href="{% url 'items' %}?category={{item.category.name }}">
