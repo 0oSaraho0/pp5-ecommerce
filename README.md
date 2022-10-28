@@ -10,6 +10,7 @@ You can reach the live site [here](https://pp5-laneys-loft.herokuapp.com/)
 
 - [Laneys Loft](#laneys-loft)
 - [Table of contents](#table-of-contents)
+- [Business-Model](#business-model)
 - [User-Experience-Design](#user-experience-design)
   * [Site Goals](#site-goals)
   * [Agile Planning](#agile-planning)
@@ -71,6 +72,10 @@ You can reach the live site [here](https://pp5-laneys-loft.herokuapp.com/)
 - [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+# Business Model
+
+Laneys Loft is a B2C business.  The business of Laneys loft is to take unwanted clothes and kids toys donated by memebers of the public and sell them online.  All proceeds from Laneys Loft are then donated to charitys and charitable events.  We advertise on Facebook and users can share the page so spread the word about Laneys Loft.  We also use the charitys we donate to as advertising because they share us on their websites as well.
 
 
 # User-Experience-Design
