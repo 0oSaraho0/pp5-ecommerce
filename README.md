@@ -75,7 +75,7 @@ You can reach the live site [here](https://pp5-laneys-loft.herokuapp.com/)
 
 # Business Model
 
-Laneys Loft is a B2C business.  The business of Laneys loft is to take unwanted clothes and kids toys donated by memebers of the public and sell them online.  All proceeds from Laneys Loft are then donated to charitys and charitable events.  We advertise on Facebook and users can share the page to spread the word about Laneys Loft.  We also use the charitys we donate to as advertising because they share us on their websites as well.
+Laneys Loft is a B2C business.  The business of Laneys loft is to take unwanted clothes and kids toys donated by members of the public and sell them online.  All proceeds from Laneys Loft are then donated to charitys and charitable events.  We advertise on Facebook and users can share the page to spread the word about Laneys Loft.  We also use the charitys we donate to as advertising because they share us on their websites as well.
 
 
 # User-Experience-Design
