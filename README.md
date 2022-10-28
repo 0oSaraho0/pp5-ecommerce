@@ -57,6 +57,8 @@ You can reach the live site [here](https://pp5-laneys-loft.herokuapp.com/)
     + [Blog](#blog-1)
     + [Reviews](#reviews-1)
     + [Donate your preloved items](#donate-your-preloved-items)
+    + [Subscribe](#subscribe-1)
+    + [Emails](#emails)
   * [Accessibility](#accessibility)
   * [Validator Testing](#validator-testing)
   * [PP8 Validator](#pp8-validator)
@@ -490,6 +492,8 @@ The front page image was taken from vogue magazine on a guide to the best charit
   - I used this to enter my table of contents.
 -AWS Amazon
   - Used to store pictures
+-Stripe
+  - I used stripe payment system
 
 ## External Python Modules
 - asgiref==3.5.2
@@ -638,7 +642,7 @@ The email field correctly showed an error if the email address was not completed
 
 The submit button correctly takes the user to a confirmation page confirming the details of the collection and that an email has been sent to the user with the details for their records.
 
-Subscribe
+### Subscribe
 The subscribe button correctly takes the user to the mailchimp subscription page.  I tested this with an email that I had already used before and it would not accept it and told me to enter a different email address as it had already been used.
 
 A new email address was successfully added.  
@@ -649,7 +653,7 @@ All of the social media icons correctly take to you their respective social medi
 
 The Facebook icon correctly went to the Laneys Loft Facebook page.
 
-Emails
+### Emails
 
 I was correctly able to set up a new user, receive an email to confirm the email address of the user, click the link to the site and confirm the email address.
 I then logged in with an incorrect name and email for the user and both flagged errors correctly by the system. 
